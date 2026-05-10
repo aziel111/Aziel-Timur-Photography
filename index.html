@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aziel Timur — Photography</title>
+<meta name="description" content="Aziel Timur Photography — Food, Portrait, Couple, Family, Events und Content für Instagram. Buchungen direkt über WhatsApp." />
+<meta property="og:title" content="Aziel Timur — Photography" />
+<meta property="og:description" content="Food, Portrait, Couple, Family, Events und Content für Instagram." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#0a0908" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+/* =============================================
+   DESIGN TOKENS
+============================================= */
+:root {
+  --bg: #0a0908;
+  --bg-elevated: #14110f;
+  --bg-card: #181513;
+  --text: #f5f1ea;
+  --text-soft: #c4bdb4;
+  --text-muted: #7a746d;
+  --accent: #c9a875;
+  --accent-soft: rgba(201, 168, 117, 0.12);
+  --border: rgba(245, 241, 234, 0.08);
+  --border-strong: rgba(245, 241, 234, 0.18);
+
+  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+
+  --max-width: 1280px;
+  --section-padding: clamp(4rem, 10vw, 8rem);
+}
+
+/* =============================================
+   RESET & BASE
+============================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+/* Subtle film-grain background texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0.96  0 0 0 0 0.94  0 0 0 0 0.91  0 0 0 0.04 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity: 0.5;
+}
+
+/* =============================================
+   TYPOGRAPHY
+============================================= */
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; line-height: 1.1; letter-spacing: -0.01em; }
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+  display: inline-block;
+}
+
+/* =============================================
+   LAYOUT
+============================================= */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+  position: relative;
+  z-index: 2;
+}
+section { position: relative; z-index: 2; }
+
+/* =============================================
+   NAVIGATION
+============================================= */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.5rem 0;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(0px);
+}
+.nav.scrolled {
+  background: rgba(10, 9, 8, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+.logo span { color: var(--accent); }
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  font-weight: 400;
+  transition: color 0.3s;
+  position: relative;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after { width: 100%; }
+
+.nav-toggle {
+  display: none;
+  width: 28px;
+  height: 28px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--text);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 320px;
+    height: 100vh;
+    background: var(--bg-elevated);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    transition: right 0.4s ease;
+    border-left: 1px solid var(--border);
+  }
+  .nav-links.open { right: 0; }
+  .nav-toggle { display: flex; z-index: 101; }
+}
+
+/* =============================================
+   HERO
+============================================= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 6rem;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.45) contrast(1.05);
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(10,9,8,0.55) 0%,
+    rgba(10,9,8,0.35) 40%,
+    rgba(10,9,8,0.85) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 880px;
+}
+.hero-eyebrow {
+  margin-bottom: 1.75rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.2s forwards;
+}
+.hero h1 {
+  font-size: clamp(3rem, 9vw, 7.5rem);
+  font-weight: 300;
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.4s forwards;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 300;
+}
+.hero-tagline {
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  color: var(--text-soft);
+  max-width: 540px;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.6s forwards;
+}
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 1s 0.8s forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =============================================
+   BUTTONS
+============================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: transparent;
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+.btn svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s;
+}
+.btn:hover svg { transform: translateX(4px); }
+
+/* Hero scroll indicator */
+.scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  z-index: 3;
+  animation: bounce 2.5s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* =============================================
+   SECTION HEADERS
+============================================= */
+.section-header {
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  max-width: 720px;
+}
+.section-header .eyebrow { margin-bottom: 1.25rem; }
+.section-header h2 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  margin-bottom: 1.25rem;
+}
+.section-header h2 em { font-style: italic; color: var(--accent); }
+.section-header p {
+  color: var(--text-soft);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* =============================================
+   ABOUT
+============================================= */
+.about {
+  padding: var(--section-padding) 0;
+  border-top: 1px solid var(--border);
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+.about-image {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.3) contrast(1.05);
+  transition: transform 1.2s ease;
+}
+.about-image:hover img { transform: scale(1.05); }
+.about-image::after {
+  content: '';
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid var(--accent);
+  pointer-events: none;
+  opacity: 0.5;
+}
+.about-text h2 {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  margin: 1rem 0 1.5rem;
+}
+.about-text h2 em { font-style: italic; color: var(--accent); }
+.about-text p {
+  color: var(--text-soft);
+  margin-bottom: 1.25rem;
+  line-height: 1.85;
+}
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--accent);
+  font-weight: 400;
+  display: block;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
+
+/* =============================================
+   SERVICES
+============================================= */
+.services {
+  padding: var(--section-padding) 0;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.service-card {
+  background: var(--bg-card);
+  padding: 2.5rem 2rem;
+  border: 1px solid var(--border);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+.service-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-4px);
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+.service-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* =============================================
+   PORTFOLIO
+============================================= */
+.portfolio { padding: var(--section-padding) 0; }
+.portfolio-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.filter-btn {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+.filter-btn:hover { color: var(--text); border-color: var(--border-strong); }
+.filter-btn.active {
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.gallery {
+  columns: 3;
+  column-gap: 1rem;
+}
+@media (max-width: 900px) { .gallery { columns: 2; } }
+@media (max-width: 540px) { .gallery { columns: 1; } }
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.8s ease, filter 0.5s ease;
+  filter: brightness(0.95);
+}
+.gallery-item:hover img {
+  transform: scale(1.04);
+  filter: brightness(1.05);
+}
+.gallery-item .gallery-tag {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(10, 9, 8, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 0.4rem 0.85rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+.gallery-item:hover .gallery-tag {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================================
+   PRICING
+============================================= */
+.pricing {
+  padding: var(--section-padding) 0;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.price-card {
+  background: var(--bg-card);
+  padding: 3rem 2.25rem;
+  border: 1px solid var(--border);
+  position: relative;
+  transition: all 0.4s ease;
+}
+.price-card.featured {
+  border-color: var(--accent);
+  background: linear-gradient(180deg, rgba(201, 168, 117, 0.06), var(--bg-card));
+}
+.price-card.featured::before {
+  content: 'Beliebt';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.3rem 1rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.price-card:hover { transform: translateY(-6px); }
+.price-name {
+  font-size: 0.78rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+.price-amount {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.price-amount span {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  margin-left: 0.4rem;
+}
+.price-desc {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+.price-features {
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+.price-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+.price-features li::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  margin-top: 6px;
+  flex-shrink: 0;
+  background: var(--accent);
+  clip-path: polygon(20% 50%, 0 70%, 40% 100%, 100% 25%, 80% 10%, 40% 75%);
+}
+.price-card .btn { width: 100%; justify-content: center; }
+
+/* =============================================
+   FAQ
+============================================= */
+.faq { padding: var(--section-padding) 0; }
+.faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 1.75rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text);
+  transition: color 0.3s;
+}
+.faq-question:hover { color: var(--accent); }
+.faq-question .icon {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  flex-shrink: 0;
+}
+.faq-question .icon::before,
+.faq-question .icon::after {
+  content: '';
+  position: absolute;
+  background: var(--accent);
+  top: 50%;
+  left: 50%;
+}
+.faq-question .icon::before { width: 14px; height: 1px; transform: translate(-50%, -50%); }
+.faq-question .icon::after { width: 1px; height: 14px; transform: translate(-50%, -50%); transition: transform 0.3s; }
+.faq-item.open .faq-question .icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  color: var(--text-soft);
+  line-height: 1.85;
+}
+.faq-item.open .faq-answer {
+  max-height: 320px;
+  padding: 0 0 1.75rem 0;
+}
+
+/* =============================================
+   CTA / BOOKING
+============================================= */
+.cta {
+  padding: var(--section-padding) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+}
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, var(--accent-soft), transparent 60%);
+  opacity: 0.6;
+}
+.cta-content { position: relative; z-index: 2; max-width: 720px; margin: 0 auto; }
+.cta h2 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin-bottom: 1.5rem;
+  line-height: 1.05;
+}
+.cta h2 em { font-style: italic; color: var(--accent); }
+.cta p {
+  color: var(--text-soft);
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+.cta-btn-large {
+  padding: 1.25rem 2.75rem;
+  font-size: 0.85rem;
+  background: #25D366;
+  border-color: #25D366;
+  color: white;
+}
+.cta-btn-large:hover {
+  background: transparent;
+  color: #25D366;
+}
+
+/* =============================================
+   FOOTER
+============================================= */
+.footer {
+  padding: 4rem 0 2rem;
+  border-top: 1px solid var(--border);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.footer-brand h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.footer-brand h3 span { color: var(--accent); }
+.footer-brand p { color: var(--text-muted); max-width: 320px; }
+.footer-col h4 {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+.footer-col a, .footer-col p {
+  display: block;
+  color: var(--text-soft);
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+.footer-col a:hover { color: var(--accent); }
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.footer-social a:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.footer-social svg { width: 16px; height: 16px; }
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* =============================================
+   FLOATING WHATSAPP BUTTON
+============================================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 99;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  transition: transform 0.3s ease;
+  animation: pulseWhatsApp 2s infinite;
+}
+.whatsapp-float:hover { transform: scale(1.1); }
+.whatsapp-float svg { width: 28px; height: 28px; color: white; }
+@keyframes pulseWhatsApp {
+  0%, 100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.7); }
+}
+
+/* =============================================
+   REVEAL ANIMATIONS
+============================================= */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+::selection { background: var(--accent); color: var(--bg); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--bg-card); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+</style>
+</head>
+<body>
+
+<!-- =============================================
+     NAVIGATION
+============================================= -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo">Aziel <span>Timur</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Über mich</a></li>
+      <li><a href="#services">Leistungen</a></li>
+      <li><a href="#portfolio">Arbeiten</a></li>
+      <li><a href="#pricing">Preise</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- =============================================
+     HERO
+============================================= -->
+<section class="hero">
+  <div class="hero-bg">
+    <!-- ⬇ ERSETZE diese URL mit deinem besten Foto: bilder/hero.jpg -->
+    <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=1800&q=80" alt="Aziel Timur Photography" />
+  </div>
+  <div class="container hero-content">
+    <span class="eyebrow hero-eyebrow">Photography Studio</span>
+    <h1>Momente, die <em>bleiben.</em></h1>
+    <p class="hero-tagline">Food, Portrait, Couple, Family, Events &amp; Content für Instagram — fotografiert mit Auge fürs Detail und einer ruhigen Bildsprache, die zu dir passt.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn">Jetzt buchen
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#portfolio" class="btn btn-ghost">Arbeiten ansehen</a>
+    </div>
+  </div>
+  <div class="scroll-hint">↓ Scroll</div>
+</section>
+
+<!-- =============================================
+     ABOUT
+============================================= -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-image reveal">
+      <!-- ⬇ ERSETZE: Dein Portraitfoto -->
+      <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=900&q=80" alt="Aziel Timur Portrait" />
+    </div>
+    <div class="about-text reveal">
+      <span class="eyebrow">Hinter der Kamera</span>
+      <h2>Hi, ich bin <em>Aziel</em>.</h2>
+      <p>Photographie ist für mich mehr als nur ein Bild — es ist Stimmung, Erinnerung und Detail in einem Moment. Ob beim Food-Shooting für ein Restaurant, einem intimen Couple-Shoot oder Content für deinen Instagram-Auftritt: ich arbeite ruhig, ehrlich und mit Liebe zum Licht.</p>
+      <p>Mein Ziel ist es, dass du dich vor der Kamera wohlfühlst — und nach dem Shooting Bilder bekommst, die du wirklich zeigen willst.</p>
+      <div class="about-stats">
+        <div>
+          <span class="stat-num">200+</span>
+          <span class="stat-label">Shoots</span>
+        </div>
+        <div>
+          <span class="stat-num">50+</span>
+          <span class="stat-label">Marken</span>
+        </div>
+        <div>
+          <span class="stat-num">5★</span>
+          <span class="stat-label">Bewertung</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     SERVICES
+============================================= -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Leistungen</span>
+      <h2>Was ich <em>anbiete.</em></h2>
+      <p>Von kulinarischen Stillleben bis zu lebendigen Familienmomenten — sechs Bereiche, eine Bildsprache.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 11h18M5 11V7a2 2 0 012-2h10a2 2 0 012 2v4M5 11v8a2 2 0 002 2h10a2 2 0 002-2v-8M9 7v4M15 7v4"/></svg>
+        <h3>Food</h3>
+        <p>Appetitliche Bilder für Restaurants, Cafés und Foodbrands — natürlich beleuchtet, geschmackvoll inszeniert.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        <h3>Portrait</h3>
+        <p>Authentische Portraits für Personal Branding, Bewerbung oder einfach für dich selbst — ehrlich und natürlich.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7-4.5-9-10c-1-3 1-6 4-6 2 0 3.5 1 5 3 1.5-2 3-3 5-3 3 0 5 3 4 6-2 5.5-9 10-9 10z"/></svg>
+        <h3>Couple</h3>
+        <p>Eure Geschichte in Bildern — entspannte Couple-Shoots, in denen ihr einfach ihr seid.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 21c0-3.3 2.7-6 6-6s6 2.7 6 6M14 21c0-2.5 2-4.5 4.5-4.5"/></svg>
+        <h3>Family</h3>
+        <p>Familienmomente, die in 20 Jahren noch Gefühl auslösen — drinnen, draußen, mit oder ohne Kinder im Schlafanzug.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 7l9-4 9 4M3 7v10l9 4 9-4V7M3 7l9 4M21 7l-9 4M12 11v10"/></svg>
+        <h3>Event</h3>
+        <p>Geburtstage, Firmenfeiern, Hochzeiten — ich halte die echten Momente fest, ohne dabei aufzufallen.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg>
+        <h3>Instagram Content</h3>
+        <p>Content-Pakete für Selbstständige & Brands — Reels, Stories und Feed-Bilder, die deine Marke wachsen lassen.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     PORTFOLIO
+============================================= -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Portfolio</span>
+      <h2>Ausgewählte <em>Arbeiten.</em></h2>
+      <p>Eine Auswahl aus den letzten Shootings — klick auf eine Kategorie, um zu filtern.</p>
+    </div>
+
+    <div class="portfolio-filters reveal">
+      <button class="filter-btn active" data-filter="all">Alle</button>
+      <button class="filter-btn" data-filter="food">Food</button>
+      <button class="filter-btn" data-filter="portrait">Portrait</button>
+      <button class="filter-btn" data-filter="couple">Couple</button>
+      <button class="filter-btn" data-filter="family">Family</button>
+      <button class="filter-btn" data-filter="event">Event</button>
+      <button class="filter-btn" data-filter="content">Content</button>
+    </div>
+
+    <!-- ⬇ ERSETZE die img-URLs mit deinen eigenen Bildern: bilder/foto1.jpg etc. -->
+    <div class="gallery" id="gallery">
+      <div class="gallery-item reveal" data-cat="food">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Food">
+        <span class="gallery-tag">Food</span>
+      </div>
+      <div class="gallery-item reveal" data-cat="portrait">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80" alt="Portrait">
+        <span class="gallery-tag">Portrait</span>
+      </div>
+      <div class="gallery-item reveal" data-cat="couple">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Couple">
+        <span class="gallery-tag">Couple</span>
+      </div>
+      <div class="gallery-item reveal" data-cat="food">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Food">
+        <span class="gallery-tag">Food</span>
+      </div>
+      <div class="gallery-item reveal" data-cat="family">
+        <img src="https://images.unsplash.com/photo-1607162042060-86bb1ce18db8?w=600&q=80" alt="Family">
+        <span class="gallery-tag">Family</span>
+      </div>
+      <div class="gallery-item reveal" data-cat="event">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&q=80" alt="Event">
+        <span class="gallery-tag">Event</span>
+      </div>
+      <div class="gallery-item reveal" data-cat="portrait">
+        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" alt="Portrait">
+        <span class="gallery-tag">Portrait</span>
+      </div>
+      <div class="gallery-item reveal" data-cat="content">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80" alt="Content">
+        <span class="gallery-tag">Content</span>
+      </div>
+      <div class="gallery-item reveal" data-cat="couple">
+        <img src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=600&q=80" alt="Couple">
+        <span class="gallery-tag">Couple</span>
+      </div>
+      <div class="gallery-item reveal" data-cat="food">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Food">
+        <span class="gallery-tag">Food</span>
+      </div>
+      <div class="gallery-item reveal" data-cat="family">
+        <img src="https://images.unsplash.com/photo-1602247222431-8c30761bbb87?w=600&q=80" alt="Family">
+        <span class="gallery-tag">Family</span>
+      </div>
+      <div class="gallery-item reveal" data-cat="event">
+        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80" alt="Event">
+        <span class="gallery-tag">Event</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     PRICING
+============================================= -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Preise</span>
+      <h2>Pakete &amp; <em>Tarife.</em></h2>
+      <p>Transparent und ehrlich. Du brauchst etwas Individuelles? Schreib mir — ich mache dir gerne ein Angebot.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="price-card reveal">
+        <div class="price-name">Mini Shoot</div>
+        <div class="price-amount">149€<span></span></div>
+        <p class="price-desc">Ideal für Portrait oder kurze Content-Aufnahmen.</p>
+        <ul class="price-features">
+          <li>30 Minuten Shooting</li>
+          <li>1 Outfit / 1 Location</li>
+          <li>10 bearbeitete Bilder</li>
+          <li>Lieferung in 7 Tagen</li>
+        </ul>
+        <a href="https://wa.me/491234567890?text=Hi%20Aziel%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Mini%20Shoot%20Paket." class="btn btn-ghost">Anfragen</a>
+      </div>
+
+      <div class="price-card featured reveal">
+        <div class="price-name">Standard</div>
+        <div class="price-amount">299€<span></span></div>
+        <p class="price-desc">Beliebteste Wahl für Couple, Family oder Food.</p>
+        <ul class="price-features">
+          <li>90 Minuten Shooting</li>
+          <li>2 Outfits / 2 Locations</li>
+          <li>25 bearbeitete Bilder</li>
+          <li>Online-Galerie zum Teilen</li>
+          <li>Lieferung in 5 Tagen</li>
+        </ul>
+        <a href="https://wa.me/491234567890?text=Hi%20Aziel%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Standard%20Paket." class="btn">Anfragen</a>
+      </div>
+
+      <div class="price-card reveal">
+        <div class="price-name">Premium</div>
+        <div class="price-amount">549€<span></span></div>
+        <p class="price-desc">Für Events oder umfangreiche Content-Pakete.</p>
+        <ul class="price-features">
+          <li>3+ Stunden Shooting</li>
+          <li>Mehrere Outfits &amp; Locations</li>
+          <li>50+ bearbeitete Bilder</li>
+          <li>3 Reels / Short-Clips</li>
+          <li>Express-Lieferung 48h</li>
+        </ul>
+        <a href="https://wa.me/491234567890?text=Hi%20Aziel%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Premium%20Paket." class="btn btn-ghost">Anfragen</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     FAQ
+============================================= -->
+<section class="faq">
+  <div class="container">
+    <div class="section-header reveal" style="text-align:center; margin-left:auto; margin-right:auto;">
+      <span class="eyebrow" style="justify-content:center;">Häufige Fragen</span>
+      <h2>Gut zu <em>wissen.</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question">Wie läuft eine Buchung ab?<span class="icon"></span></button>
+        <div class="faq-answer"><p>Schreib mir einfach über WhatsApp mit deinem Wunschtermin und der Art des Shootings. Wir besprechen alle Details, ich schicke dir eine Bestätigung — und am Tag des Shootings legen wir los.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">Wann bekomme ich meine Bilder?<span class="icon"></span></button>
+        <div class="faq-answer"><p>Standardmäßig innerhalb von 5–7 Tagen. Bei Express-Lieferung (Premium) innerhalb von 48 Stunden.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">Kommst du auch zu mir?<span class="icon"></span></button>
+        <div class="faq-answer"><p>Ja — innerhalb der Stadt kostenlos. Bei weiterer Anfahrt fällt eine kleine Reisepauschale an. Schreib mir einfach deine Location und ich rechne dir das durch.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">Bekomme ich auch die unbearbeiteten Bilder?<span class="icon"></span></button>
+        <div class="faq-answer"><p>Nein, nur die bearbeitete Auswahl. Die Auswahl &amp; Bearbeitung ist Teil meiner Bildsprache und gehört zum Service dazu.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question">Was passiert bei schlechtem Wetter?<span class="icon"></span></button>
+        <div class="faq-answer"><p>Wir verlegen den Termin kostenlos. Manchmal sind regnerische oder bewölkte Tage sogar besser fürs Licht — also keine Sorge.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     CTA / BOOKING
+============================================= -->
+<section class="cta" id="contact">
+  <div class="container cta-content reveal">
+    <span class="eyebrow" style="justify-content:center;">Bereit?</span>
+    <h2 style="margin-top:1.5rem;">Lass uns deinen Moment <em>festhalten.</em></h2>
+    <p>Schreib mir direkt über WhatsApp — meistens antworte ich innerhalb von 1–2 Stunden. Erzähl mir kurz, was du dir vorstellst, und wir finden gemeinsam das perfekte Paket.</p>
+    <a href="https://wa.me/491234567890?text=Hi%20Aziel%2C%20ich%20w%C3%BCrde%20gerne%20ein%20Shooting%20buchen." class="btn cta-btn-large">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.5 14c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.7-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.2.8.9-3.1-.2-.3C3.9 15 3.5 13.5 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.3-8.5 8.3z"/></svg>
+      WhatsApp Nachricht senden
+    </a>
+  </div>
+</section>
+
+<!-- =============================================
+     FOOTER
+============================================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Aziel <span>Timur</span></h3>
+        <p>Photography für Menschen, Marken und Momente, die echt sein dürfen.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/dein_handle" aria-label="Instagram" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="https://wa.me/491234567890" aria-label="WhatsApp" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.7-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6 2.6 1.1 2.6.7 3.1.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+          </a>
+          <a href="mailto:hallo@dein-domain.de" aria-label="E-Mail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="#about">Über mich</a>
+        <a href="#services">Leistungen</a>
+        <a href="#portfolio">Arbeiten</a>
+        <a href="#pricing">Preise</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <p>hallo@dein-domain.de</p>
+        <p>Mo–Fr · 09:00–19:00</p>
+        <a href="https://wa.me/491234567890" target="_blank">WhatsApp →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Aziel Timur Photography. Alle Rechte vorbehalten.</span>
+      <span>
+        <a href="#">Impressum</a> &nbsp;·&nbsp;
+        <a href="#">Datenschutz</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- =============================================
+     FLOATING WHATSAPP BUTTON
+     ⬇ ERSETZE 491234567890 mit deiner Nummer (ohne + oder 00)
+============================================= -->
+<a href="https://wa.me/491234567890?text=Hi%20Aziel%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20Shooting." class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.7-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+<script>
+// =============================================
+// NAV: scroll background + mobile toggle
+// =============================================
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 30);
+});
+
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// =============================================
+// REVEAL ON SCROLL
+// =============================================
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// =============================================
+// PORTFOLIO FILTER
+// =============================================
+const filterBtns = document.querySelectorAll('.filter-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    galleryItems.forEach(item => {
+      const show = filter === 'all' || item.dataset.cat === filter;
+      item.style.display = show ? '' : 'none';
+    });
+  });
+});
+
+// =============================================
+// FAQ ACCORDION
+// =============================================
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+});
+
+// =============================================
+// FOOTER YEAR
+// =============================================
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
