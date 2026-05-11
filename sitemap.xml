@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://aziel.me/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://aziel.me/hero.jpeg</image:loc>
+      <image:title>Foodfotograf Frankfurt — Aziel Timur Photography</image:title>
+      <image:caption>Professionelle Foodfotografie in Frankfurt am Main und dem Rhein-Main-Gebiet</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/about.jpeg</image:loc>
+      <image:title>Aziel Timur — Foodfotograf in Frankfurt</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/food-1.jpeg</image:loc>
+      <image:title>Foodfotografie Frankfurt — Restaurant Foodshooting</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/food-2.jpeg</image:loc>
+      <image:title>Foodfotograf Frankfurt — appetitliche Speisen für Cafés und Restaurants</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/food-3.jpeg</image:loc>
+      <image:title>Food Photography Frankfurt — kulinarische Foodstillleben</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/portrait-1.jpeg</image:loc>
+      <image:title>Portraitfotograf Frankfurt — Business Portrait</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/portrait-2.jpeg</image:loc>
+      <image:title>Portrait Shooting Frankfurt — Personal Branding</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/portrait-3.jpeg</image:loc>
+      <image:title>Portraitfotografie Rhein-Main — Headshots</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/couple-1.jpeg</image:loc>
+      <image:title>Couple Shooting Frankfurt — Paarfotos am Mainufer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/couple-2.jpeg</image:loc>
+      <image:title>Pärchenfotograf Frankfurt — Couple Photography</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/couple-3.jpeg</image:loc>
+      <image:title>Verlobungsshooting Rhein-Main</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/family-1.jpeg</image:loc>
+      <image:title>Familienfotograf Frankfurt — Familienshooting</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/family-2.jpeg</image:loc>
+      <image:title>Familienfotos Frankfurt — Lifestyle Family Photography</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/family-3.jpeg</image:loc>
+      <image:title>Family Shooting Rhein-Main</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/content-1.jpeg</image:loc>
+      <image:title>Instagram Content Frankfurt — Brand Photography</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/content-2.jpeg</image:loc>
+      <image:title>Social Media Content Frankfurt</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/content-3.jpeg</image:loc>
+      <image:title>Content Creator Photography Rhein-Main</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/event-1.jpeg</image:loc>
+      <image:title>Eventfotograf Frankfurt — Firmenfeier</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/event-2.jpeg</image:loc>
+      <image:title>Hochzeitsfotograf Frankfurt</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://aziel.me/event-3.jpeg</image:loc>
+      <image:title>Event Photography Rhein-Main</image:title>
+    </image:image>
+  </url>
+</urlset>
