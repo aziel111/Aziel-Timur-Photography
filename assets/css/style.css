@@ -200,3 +200,23 @@ footer.site a:hover{ color:var(--bone) }
 .legal p, .legal li{ color:#D3DEDE; max-width:70ch }
 .fill{ background:rgba(180,35,44,.22); border-bottom:1px dashed var(--crimson-hi); padding:0 .25em }
 .legal h2{ font-family:var(--sans); font-weight:600; font-size:1.2rem }
+
+/* AGB, Widerruf */
+.legal h3{ font-family:var(--sans); font-weight:600; font-size:1.05rem; margin:1.8rem 0 .6rem }
+.legal ul{ padding-left:1.2rem; margin:0 0 1em }
+.legal li{ margin:.3rem 0 }
+.legal .lang{ margin:-1rem 0 2.4rem; font-size:.95rem }
+.legal .lang a{ color:var(--mist) }
+.legal .box{ border:1px solid var(--line-dark); border-radius:8px; padding:clamp(18px, 3vw, 30px); margin:1.2rem 0 2rem; background:rgba(9,29,35,.45) }
+.legal .box h3{ font-size:1.3rem }
+.legal .box h3:first-child{ margin-top:0 }
+.legal hr{ border:0; border-top:1px solid var(--line-dark); margin:4.5rem 0 3rem }
+
+/* Спасибо */
+.thanks{ min-height:100vh; min-height:100svh; display:grid; align-items:center; padding:120px 0 80px;
+  background:linear-gradient(180deg, rgba(9,29,35,.62) 0%, rgba(9,29,35,.88) 55%, var(--petrol-deep) 100%), url(../img/hero-portal.jpg) center 30%/cover no-repeat }
+.thanks h1{ font-size:clamp(2.6rem, 7vw, 4.6rem); line-height:1.05; margin-bottom:1.2rem }
+.thanks ol{ list-style:none; counter-reset:s; padding:0; margin:2.4rem 0 2rem; display:grid; gap:1.1rem; max-width:620px }
+.thanks ol li{ counter-increment:s; display:grid; grid-template-columns:2.4rem 1fr; gap:.4rem; color:#D3DEDE }
+.thanks ol li::before{ content:counter(s); font-weight:300; font-size:1.7rem; line-height:1.05; color:var(--crimson-hi) }
+.thanks .actions{ display:flex; flex-wrap:wrap; gap:12px; margin-top:2rem }
