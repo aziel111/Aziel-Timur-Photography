@@ -1,8 +1,4 @@
-# robots.txt für aziel.me
-# Aziel Timur Photography — Foodfotograf Frankfurt & Rhein-Main
-
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://aziel.me/sitemap.xml
