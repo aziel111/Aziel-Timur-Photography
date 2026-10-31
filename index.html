@@ -19,7 +19,7 @@
 <link rel="preload" href="assets/fonts/golos.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Course","name":"Рисовать светом","description":"Курс по фотографии и AI-клипам: два PDF и живой урок в Discord на 120 минут.","inLanguage":"ru","provider":{"@type":"Person","name":"Aziel Timur","url":"https://aziel.me","sameAs":["https://www.instagram.com/aziel_timur"]},"offers":{"@type":"Offer","price":"299","priceCurrency":"USD","url":"https://aziel.me/#price","availability":"https://schema.org/InStock"}}
+{"@context":"https://schema.org","@type":"Course","name":"Рисовать светом","description":"Курс по фотографии и AI-клипам: два PDF и живой урок в Discord на 120 минут.","inLanguage":"ru","provider":{"@type":"Person","name":"Aziel Timur","url":"https://aziel.me","sameAs":["https://www.instagram.com/aziel_timur"]},"offers":{"@type":"AggregateOffer","lowPrice":"99","highPrice":"299","offerCount":"2","priceCurrency":"USD","url":"https://aziel.me/#price","availability":"https://schema.org/InStock"}}
 </script>
 </head>
 <body>
@@ -49,7 +49,7 @@
     <h1>Рисовать светом</h1>
     <p class="lead">Курс Aziel Timur: как снимать AI-клипы, которые смотрит вся страна. От основ фотографии до готового видео на YouTube.</p>
     <div class="actions">
-      <a class="btn btn-red" href="#price">Купить курс · 299 $</a>
+      <a class="btn btn-red" href="#price">Купить курс · от 99 $</a>
       <a class="btn btn-ghost" href="#clip">Смотреть клип</a>
     </div>
     <p class="note">Курс на русском. Подходит без опыта.</p>
@@ -152,7 +152,7 @@
       <img src="assets/img/desert-planes.jpg" alt="Герой в профиле на первом плане, девять женщин в национальных костюмах перед меловой скалой" loading="lazy">
       <div class="txt">
         <h3>Урок в Discord · 120 минут</h3>
-        <p>Один живой урок с демонстрацией экрана. Aziel показывает весь процесс на своих готовых проектах — программы, промпты, референсы и рабочие секреты — и разбирает твои кадры.</p>
+        <p>В варианте «PDF + урок». Один живой урок с демонстрацией экрана. Aziel показывает весь процесс на своих готовых проектах — программы, промпты, референсы и рабочие секреты — и разбирает твои кадры.</p>
       </div>
     </div>
   </div>
@@ -162,10 +162,10 @@
   <div class="wrap">
     <h2 id="how-h">Как начать</h2>
     <ol class="steps">
-      <li><h3>Купи курс</h3><p>299 $ за всё: две части в PDF и урок в Discord. Оплата картой, Apple Pay или Google Pay.</p></li>
-      <li><h3>Получи письмо</h3><p>В течение 24 часов: оба PDF и приглашение в Discord.</p></li>
+      <li><h3>Выбери вариант</h3><p>PDF за 99 $ или PDF + урок в Discord за 299 $. Оплата картой, Apple Pay или Google Pay.</p></li>
+      <li><h3>Получи письмо</h3><p>В течение 24 часов: оба PDF, а с уроком — ещё и приглашение в Discord.</p></li>
       <li><h3>Начни с Basics</h3><p>Даже если никогда не держал камеру.</p></li>
-      <li><h3>Урок в Discord</h3><p>120 минут: весь путь клипа и разбор твоих первых кадров.</p></li>
+      <li><h3>Урок в Discord</h3><p>В варианте за 299 $: 120 минут, весь путь клипа и разбор твоих первых кадров.</p></li>
     </ol>
   </div>
 </section>
@@ -184,26 +184,43 @@
 </section>
 
 <section class="price" id="price" aria-labelledby="price-h">
-  <div class="wrap offer">
-    <div>
-      <h2 id="price-h">Курс целиком</h2>
-      <div class="amount">299 $</div>
-      <p class="muted">Одна оплата, без подписки.</p>
+  <div class="wrap">
+    <h2 id="price-h">Выбери вариант</h2>
+    <p class="muted" style="margin-top:1rem">Одна оплата, без подписки.</p>
+    <div class="plans">
+      <article class="plan">
+        <h3>PDF</h3>
+        <p class="plan-sub">Учишься сам, в своём темпе</p>
+        <div class="amount">99 $</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Часть 1. Basics — PDF</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Часть 2. AI-клип — PDF</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Все оригинальные промпты клипа</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Шаблоны промптов для своих клипов</span></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-ghost" href="PDF_LINK" rel="noopener">Купить PDF за 99 $</a>
+        </div>
+      </article>
+      <article class="plan plan-main">
+        <span class="plan-tag">С Aziel</span>
+        <h3>PDF + урок</h3>
+        <p class="plan-sub">Весь курс и живой разбор</p>
+        <div class="amount">299 $</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Всё из варианта «PDF»</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Живой урок в Discord, 120 минут</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Разбор твоих кадров и промптов</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Рабочие секреты Aziel на его проектах</span></li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-red" href="https://buy.stripe.com/cNidR94eJ7K4avBf6o7Re00?locale=ru" rel="noopener">Купить за 299 $</a>
+        </div>
+      </article>
     </div>
-    <div>
-      <ul class="incl">
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Часть 1. Basics — PDF</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Часть 2. AI-клип — PDF</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Живой урок в Discord, 120 минут</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Промпты, референсы и рабочие секреты Aziel</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Шаблоны промптов для своих клипов</span></li>
-      </ul>
-      <div class="actions">
-        <a class="btn btn-red" href="https://buy.stripe.com/cNidR94eJ7K4avBf6o7Re00?locale=ru" rel="noopener">Купить за 299 $</a>
-        <a class="btn btn-ghost" href="https://ig.me/m/aziel_timur" rel="noopener">Есть вопрос? Instagram</a>
-      </div>
-      <p class="small">Оплата через Stripe: карта, Apple Pay или Google Pay. Покупая курс, ты принимаешь <a href="agb.html#ru">условия покупки</a>.</p>
-      <p class="small">Подписки на нейросети оплачиваются отдельно: клип длиной 2:37 обошёлся примерно в 200 €. Как посчитать бюджет своего клипа — в главе 02 второй части.</p>
+    <div class="plans-foot">
+      <p class="small">Оплата через Stripe: карта, Apple Pay или Google Pay. Покупая курс, ты принимаешь <a href="agb.html#ru">условия покупки</a>. Подписки на нейросети оплачиваются отдельно: клип длиной 2:37 обошёлся примерно в 200 €.</p>
+      <a class="btn btn-ghost" href="https://ig.me/m/aziel_timur" rel="noopener">Есть вопрос? Instagram</a>
     </div>
   </div>
 </section>
@@ -217,7 +234,8 @@
       <details><summary>Сколько стоят программы?</summary><p>Firefly: 4000 кредитов за 10 €, это около 50 кадров. Higgsfield: тариф Ultra за 79 $ в месяц. DaVinci Resolve — бесплатно. В курсе есть формула, по которой ты посчитаешь бюджет своего клипа.</p></details>
       <details><summary>Работает ли это в моей стране?</summary><p>Доступ к сервисам зависит от страны. Seedance — модель ByteDance, в Китае она доступна через сервис 即梦 (Jimeng). Напиши Aziel, где ты находишься, — он подскажет, с чего начать.</p></details>
       <details><summary>На каком языке курс?</summary><p>PDF и урок — на русском. Промпты пишутся на английском, текст песни — на языке песни.</p></details>
-      <details><summary>Как оплатить?</summary><p>Кнопкой «Купить за 299 $»: картой, Apple Pay или Google Pay через Stripe. Stripe может показать цену в твоей валюте. Если карта не проходит, напиши Aziel в Instagram — найдёте другой способ.</p></details>
+      <details><summary>Чем отличаются варианты?</summary><p>«PDF» — обе части курса, все промпты и шаблоны: учишься сам. «PDF + урок» — плюс 2 часа в Discord с Aziel: он показывает процесс на своих проектах и разбирает твои кадры. Начал с PDF и захотел урок — напиши Aziel.</p></details>
+      <details><summary>Как оплатить?</summary><p>Кнопкой «Купить» в нужном варианте: картой, Apple Pay или Google Pay через Stripe. Stripe может показать цену в твоей валюте. Если карта не проходит, напиши Aziel в Instagram — найдёте другой способ.</p></details>
       <details><summary>Как проходит урок?</summary><p>Один урок на 120 минут в Discord, с демонстрацией экрана. Время выбираете вместе. Aziel показывает весь процесс на своих готовых проектах — от листа персонажа до монтажа — и отвечает на вопросы.</p></details>
     </div>
   </div>
