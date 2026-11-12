@@ -15,10 +15,10 @@
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/aziel-serif-italic.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="assets/fonts/aziel-serif.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/inter-display-600.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/inter-display-500.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="assets/fonts/golos.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=202611121">
+<link rel="stylesheet" href="assets/css/style.css?v=202611122">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Aziel Timur","alternateName":"Aziel","url":"https://aziel.me/","jobTitle":"Артист, режиссёр клипов, фотограф","birthPlace":"Бишкек","homeLocation":{"@type":"Place","name":"Франкфурт-на-Майне"},"sameAs":["https://www.instagram.com/aziel_timur","https://www.youtube.com/@azielme"]}
@@ -51,7 +51,10 @@
 
 <section class="hero" aria-label="Aziel Timur">
   <figure class="hero-bild">
-    <img src="assets/img/shot-closeup.jpg" alt="Герой клипов Aziel крупным планом, за ним — женщины в кыргызских национальных костюмах" fetchpriority="high">
+    <picture>
+      <source media="(max-width:760px)" srcset="assets/img/hero-aziel-m.jpg">
+      <img src="assets/img/hero-aziel.jpg" alt="Aziel — герой своих клипов: косички, чёрное худи, взгляд через плечо" fetchpriority="high">
+    </picture>
   </figure>
 
   <svg class="siegel" viewBox="0 0 200 200" aria-hidden="true">
@@ -322,6 +325,6 @@
   <p class="player-titel"></p>
 </dialog>
 
-<script src="assets/js/main.js?v=202611121" defer></script>
+<script src="assets/js/main.js?v=202611122" defer></script>
 </body>
 </html>

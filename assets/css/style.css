@@ -1,11 +1,12 @@
 /* =========================================================
    Aziel Timur — aziel.me
-   Schwarz, gebürstetes Gold, kursive Serife.
+   Schwarz, gebürstetes Gold, moderne Grotesk (Inter Display + Golos Text).
    Eine Datei für alle Seiten: Start, Kurs, Danke, Rechtliches.
    ========================================================= */
 
-@font-face { font-family:"Aziel Serif"; src:url("../fonts/aziel-serif.woff") format("woff"); font-weight:400; font-style:normal; font-display:swap }
-@font-face { font-family:"Aziel Serif"; src:url("../fonts/aziel-serif-italic.woff") format("woff"); font-weight:400; font-style:italic; font-display:swap }
+@font-face { font-family:"Inter Display"; src:url("../fonts/inter-display-300.woff") format("woff"); font-weight:300; font-style:normal; font-display:swap }
+@font-face { font-family:"Inter Display"; src:url("../fonts/inter-display-500.woff") format("woff"); font-weight:400 500; font-style:normal; font-display:swap }
+@font-face { font-family:"Inter Display"; src:url("../fonts/inter-display-600.woff") format("woff"); font-weight:600 700; font-style:normal; font-display:swap }
 @font-face { font-family:"Golos Text"; src:url("../fonts/golos.woff") format("woff"); font-weight:400 900; font-style:normal; font-display:swap }
 
 :root {
@@ -24,7 +25,7 @@
     #6e4a26 0%, #a87b45 16%, #e9cf98 30%, #fff1cc 36%, #c79a5e 46%,
     #7a532c 60%, #b88a52 74%, #ecd3a0 86%, #8a6034 100%);
 
-  --serif:"Aziel Serif", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --display:"Inter Display", "Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
   --sans:"Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --rand:clamp(16px, 4vw, 48px);
@@ -38,7 +39,7 @@ html { scroll-behavior:smooth; scroll-padding-top:calc(var(--kopf-h) + 16px); -w
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto } }
 body {
   margin:0; background:var(--schwarz); color:var(--text);
-  font-family:var(--serif); font-size:1.125rem; line-height:1.65;
+  font-family:var(--sans); font-size:1.0625rem; line-height:1.68;
   -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; overflow-x:hidden;
 }
 img, svg { display:block; max-width:100% }
@@ -66,7 +67,7 @@ h1, h2, h3, h4 { margin:0; font-weight:400 }
 }
 .eyebrow::before { content:""; width:36px; height:1px; background:var(--bronze); flex:none }
 .titel {
-  font-family:var(--serif); font-style:italic; color:var(--champagner);
+  font-family:var(--display); font-style:normal; color:var(--champagner);
   font-size:clamp(2.6rem, 5.6vw, 4.8rem); line-height:1.02; letter-spacing:-.015em; max-width:16ch;
 }
 .lead { font-size:clamp(1.15rem, 1.5vw, 1.32rem); line-height:1.6; color:var(--champagner) }
@@ -110,7 +111,7 @@ h1, h2, h3, h4 { margin:0; font-weight:400 }
 .kopf .wrap { display:flex; align-items:center; justify-content:space-between; gap:24px }
 .logo { display:inline-flex; align-items:baseline; gap:.45em; text-decoration:none; line-height:1 }
 .logo-marke {
-  font-family:var(--serif); font-style:italic; font-size:1.9rem; letter-spacing:-.02em; padding:.05em .06em .12em 0;
+  font-family:var(--display); font-style:normal; font-size:1.9rem; letter-spacing:-.02em; padding:.05em .06em .12em 0;
   background:var(--metall); background-size:220% 100%; background-position:18% 0; -webkit-background-clip:text; background-clip:text; color:transparent;
 }
 .logo-zusatz { font-family:var(--sans); font-size:.72rem; letter-spacing:.28em; text-transform:uppercase; color:var(--leise) }
@@ -135,7 +136,7 @@ h1, h2, h3, h4 { margin:0; font-weight:400 }
   /* backdrop-filter würde das fixierte Menü in die Kopfzeile einsperren */
   .kopf.menue-offen { -webkit-backdrop-filter:none; backdrop-filter:none; background:#000 }
   .kopf-nav { background:#000 }
-  .kopf-nav > a:not(.btn) { font-family:var(--serif); font-style:italic; font-size:clamp(2rem, 9vw, 2.8rem); color:var(--champagner); border:0; padding:4px 0 }
+  .kopf-nav > a:not(.btn) { font-family:var(--display); font-style:normal; font-size:clamp(2rem, 9vw, 2.8rem); color:var(--champagner); border:0; padding:4px 0 }
   .kopf-nav .btn { margin-top:24px; min-height:54px; width:100%; font-size:1.05rem }
 }
 body.menue-offen { overflow:hidden }
@@ -146,14 +147,15 @@ body.menue-offen { overflow:hidden }
   position:relative; min-height:100svh; display:flex; flex-direction:column; justify-content:flex-end;
   padding-top:calc(var(--kopf-h) + 32px); overflow:hidden; isolation:isolate;
 }
-.hero-bild { position:absolute; top:0; right:0; bottom:0; width:min(56vw, 940px); margin:0; z-index:-1 }
-.hero-bild img { width:100%; height:100%; object-fit:cover; object-position:78% 40% }
+.hero-bild { position:absolute; top:0; right:0; bottom:0; width:min(62vw, 1080px); margin:0; z-index:-1; background:#000 }
+.hero-bild picture { display:block; width:100%; height:100% }
+.hero-bild img { width:100%; height:100%; object-fit:cover; object-position:54% 28%; filter:brightness(.9) contrast(1.06) saturate(.92) }
 .hero-bild::after {
   content:""; position:absolute; inset:0; pointer-events:none;
   background:
-    linear-gradient(90deg, #000 0%, rgba(0,0,0,.78) 16%, rgba(0,0,0,.18) 48%, rgba(0,0,0,0) 70%),
-    linear-gradient(0deg, #000 0%, rgba(0,0,0,.8) 22%, rgba(0,0,0,0) 52%),
-    linear-gradient(180deg, rgba(0,0,0,.75) 0%, rgba(0,0,0,0) 22%);
+    linear-gradient(90deg, #000 0%, rgba(0,0,0,.72) 10%, rgba(0,0,0,.12) 30%, rgba(0,0,0,0) 44%),
+    linear-gradient(0deg, #000 0%, rgba(0,0,0,.78) 18%, rgba(0,0,0,0) 44%),
+    linear-gradient(180deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.5) 11%, rgba(0,0,0,0) 26%);
 }
 .hero::after {
   content:""; position:absolute; z-index:-1; pointer-events:none; left:-4vw; top:16vh;
@@ -172,7 +174,7 @@ a.status:hover { color:var(--gold) }
 @keyframes puls { 50% { box-shadow:0 0 0 7px rgba(214,188,136,.06) } }
 .hero-cta { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px }
 .marke {
-  display:block; font-family:var(--serif); font-style:italic; font-weight:400;
+  display:block; font-family:var(--display); font-style:normal; font-weight:400;
   font-size:clamp(5.4rem, 30vw, 27rem); line-height:.8; letter-spacing:-.04em;
   margin:clamp(18px, 3vw, 40px) 0 0 -.05em; padding:.04em .06em .18em 0;
   background:var(--metall); background-size:240% 100%; background-position:0% 0;
@@ -191,8 +193,8 @@ a.status:hover { color:var(--gold) }
   .hero { min-height:0; padding-top:0; justify-content:flex-start }
   .hero::after { display:none }
   .hero-bild { position:relative; width:100%; height:min(70svh, 620px); z-index:auto; order:0 }
-  .hero-bild img { object-position:72% 30% }
-  .hero-bild::after { background:linear-gradient(0deg, #000 0%, rgba(0,0,0,.55) 24%, rgba(0,0,0,0) 52%), linear-gradient(180deg, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 24%) }
+  .hero-bild img { object-position:50% 22% }
+  .hero-bild::after { background:linear-gradient(0deg, #000 0%, rgba(0,0,0,.55) 24%, rgba(0,0,0,0) 52%), linear-gradient(180deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.45) 12%, rgba(0,0,0,0) 28%) }
   .hero > h1 { order:1; position:relative; z-index:2; margin-top:-.66em }
   .hero > h1 .marke { margin-top:0; font-size:38vw }
   .hero-inhalt { order:2; padding-bottom:48px }
@@ -206,7 +208,7 @@ a.status:hover { color:var(--gold) }
 .zahlen ul { list-style:none; margin:0 auto; padding-block:0; display:grid; grid-template-columns:repeat(4, minmax(0,1fr)) }
 .zahlen li { padding:clamp(22px, 3vw, 36px) clamp(12px, 2vw, 28px); border-left:1px solid var(--linie-zart) }
 .zahlen li:first-child { border-left:0; padding-left:0 }
-.zahlen strong { display:block; font-family:var(--serif); font-style:italic; font-weight:400; font-size:clamp(2rem, 3.6vw, 3rem); line-height:1.05; color:var(--champagner) }
+.zahlen strong { display:block; font-family:var(--display); font-style:normal; font-weight:400; font-size:clamp(2rem, 3.6vw, 3rem); line-height:1.05; color:var(--champagner) }
 .zahlen span { display:block; margin-top:6px; font-family:var(--sans); font-size:.9rem; line-height:1.45; color:var(--leise) }
 @media (max-width:860px) {
   .zahlen ul { grid-template-columns:1fr 1fr }
@@ -235,7 +237,7 @@ a.status:hover { color:var(--gold) }
 
 .zitat { margin:clamp(80px, 11vw, 150px) auto 0; max-width:920px; text-align:center }
 .zitat .ornament { margin-bottom:28px }
-.zitat blockquote { margin:0 auto; max-width:22ch; font-family:var(--serif); font-style:italic; color:var(--champagner); font-size:clamp(1.9rem, 3.6vw, 3.1rem); line-height:1.18; letter-spacing:-.01em }
+.zitat blockquote { margin:0 auto; max-width:22ch; font-family:var(--display); font-style:normal; color:var(--champagner); font-size:clamp(1.9rem, 3.6vw, 3.1rem); line-height:1.18; letter-spacing:-.01em }
 .zitat cite { display:block; margin-top:22px; font-family:var(--sans); font-style:normal; font-size:.82rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold) }
 
 .ornament { display:flex; align-items:center; justify-content:center; gap:18px; color:var(--bronze) }
@@ -248,8 +250,8 @@ a.status:hover { color:var(--gold) }
 .weg-liste { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); border-top:1px solid var(--linie-zart); border-bottom:1px solid var(--linie-zart) }
 .weg-liste li { padding:clamp(28px, 3.4vw, 44px) clamp(18px, 2.2vw, 30px) clamp(32px, 4vw, 52px); border-left:1px solid var(--linie-zart) }
 .weg-liste li:first-child { border-left:0; padding-left:0 }
-.weg-nr { display:block; font-family:var(--serif); font-style:italic; font-size:3.2rem; line-height:1; margin-bottom:22px; padding-bottom:.1em }
-.weg-liste h3 { font-family:var(--serif); font-style:italic; font-size:clamp(1.55rem, 2.2vw, 1.95rem); line-height:1.12; color:var(--champagner); margin-bottom:14px }
+.weg-nr { display:block; font-family:var(--display); font-style:normal; font-size:3.2rem; line-height:1; margin-bottom:22px; padding-bottom:.1em }
+.weg-liste h3 { font-family:var(--display); font-style:normal; font-size:clamp(1.55rem, 2.2vw, 1.95rem); line-height:1.12; color:var(--champagner); margin-bottom:14px }
 .weg-liste p { font-size:1.02rem; line-height:1.62; margin:0; color:var(--text) }
 @media (max-width:1000px) {
   .weg-liste { grid-template-columns:1fr 1fr }
@@ -286,14 +288,14 @@ a.status:hover { color:var(--gold) }
 
 .clip-gross { display:grid; grid-template-columns:minmax(0, 8fr) minmax(0, 4fr); gap:clamp(28px, 4vw, 64px); align-items:end }
 .clip-gross .rahmen { padding:12px }
-.clip-info h3 { font-family:var(--serif); font-style:italic; font-size:clamp(2rem, 3.4vw, 2.9rem); line-height:1.05; color:var(--champagner); margin:0 0 6px }
+.clip-info h3 { font-family:var(--display); font-style:normal; font-size:clamp(2rem, 3.4vw, 2.9rem); line-height:1.05; color:var(--champagner); margin:0 0 6px }
 .clip-info .uebersetzung { font-family:var(--sans); font-size:.95rem; color:var(--gold); margin-bottom:20px }
 .clip-info p { font-size:1.04rem }
 @media (max-width:900px) { .clip-gross { grid-template-columns:1fr } }
 
 .clip-raster { list-style:none; margin:clamp(56px, 7vw, 96px) 0 0; padding:0; display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:clamp(20px, 2.6vw, 36px) }
 .clip-karte .play { width:54px }
-.clip-karte h3 { font-family:var(--serif); font-style:italic; font-size:1.5rem; line-height:1.15; color:var(--champagner); margin:18px 0 4px }
+.clip-karte h3 { font-family:var(--display); font-style:normal; font-size:1.5rem; line-height:1.15; color:var(--champagner); margin:18px 0 4px }
 .clip-karte p { font-family:var(--sans); font-size:.9rem; line-height:1.5; color:var(--leise); margin:0 }
 @media (max-width:1000px) { .clip-raster { grid-template-columns:1fr 1fr } }
 @media (max-width:520px) { .clip-raster { grid-template-columns:1fr } }
@@ -307,13 +309,13 @@ a.status:hover { color:var(--gold) }
 .player-buehne iframe { position:absolute; inset:0; width:100%; height:100%; border:0 }
 .player-zu { position:absolute; right:0; bottom:calc(100% + 10px); display:inline-flex; align-items:center; gap:8px; background:none; border:0; color:var(--champagner); font-family:var(--sans); font-size:.95rem; cursor:pointer; padding:6px 0 }
 .player-zu svg { width:20px; height:20px }
-.player-titel { margin:0; padding:14px 18px; font-family:var(--serif); font-style:italic; font-size:1.2rem; color:var(--champagner); border-top:1px solid var(--linie-zart) }
+.player-titel { margin:0; padding:14px 18px; font-family:var(--display); font-style:normal; font-size:1.2rem; color:var(--champagner); border-top:1px solid var(--linie-zart) }
 
 /* ---------- Экклесия / Bildband ---------- */
 
 .ekklesia { text-align:center; overflow:hidden }
 .ekklesia-wort {
-  display:block; font-family:var(--serif); font-style:italic; font-size:clamp(4rem, 17vw, 15rem); line-height:.86; letter-spacing:-.035em;
+  display:block; font-family:var(--display); font-style:normal; font-size:clamp(4rem, 17vw, 15rem); line-height:.86; letter-spacing:-.035em;
   padding:.04em .08em .16em; margin:0 auto clamp(20px, 3vw, 36px);
 }
 .ekklesia .lead { max-width:40ch; margin-inline:auto }
@@ -339,7 +341,7 @@ a.status:hover { color:var(--gold) }
 .tafel-box .titel { font-size:clamp(2.4rem, 4.6vw, 4rem); margin-bottom:22px }
 .tafel-box ul { list-style:none; margin:26px 0 30px; padding:0; border-top:1px solid var(--linie-zart) }
 .tafel-box li { display:flex; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px solid var(--linie-zart); font-family:var(--sans); font-size:.98rem }
-.tafel-box li b { font-family:var(--serif); font-style:italic; font-weight:400; font-size:1.25rem; color:var(--gold); white-space:nowrap }
+.tafel-box li b { font-family:var(--display); font-style:normal; font-weight:400; font-size:1.25rem; color:var(--gold); white-space:nowrap }
 .tafel-box .hero-cta { margin-top:0 }
 @media (max-width:860px) { .tafel-box { grid-template-columns:1fr } .tafel-box .bild { min-height:0; aspect-ratio:16/10; border-right:0; border-bottom:1px solid var(--linie-zart) } }
 
@@ -355,14 +357,14 @@ a.status:hover { color:var(--gold) }
 .kontakt-liste a { display:block; height:100%; padding:clamp(26px, 3.4vw, 44px) clamp(16px, 2.4vw, 32px); text-decoration:none; transition:background-color .3s }
 .kontakt-liste a:hover { background:rgba(172,130,77,.07) }
 .kontakt-liste span { display:block; font-family:var(--sans); font-size:.8rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:10px }
-.kontakt-liste strong { display:block; font-family:var(--serif); font-style:italic; font-weight:400; font-size:clamp(1.4rem, 2.4vw, 2rem); color:var(--champagner); overflow-wrap:anywhere }
+.kontakt-liste strong { display:block; font-family:var(--display); font-style:normal; font-weight:400; font-size:clamp(1.4rem, 2.4vw, 2rem); color:var(--champagner); overflow-wrap:anywhere }
 @media (max-width:760px) { .kontakt-liste { grid-template-columns:1fr } .kontakt-liste li + li { border-left:0; border-top:1px solid var(--linie-zart) } }
 
 /* ---------- Fußzeile ---------- */
 
 .fuss { border-top:1px solid var(--linie-zart); padding:clamp(56px, 7vw, 88px) 0 40px; color:var(--leise) }
 .fuss-oben { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:24px 48px; padding-bottom:36px; border-bottom:1px solid var(--linie-zart) }
-.fuss-marke { font-family:var(--serif); font-style:italic; font-size:clamp(3.2rem, 8vw, 6rem); line-height:.9; letter-spacing:-.03em; padding:.04em .06em .14em 0 }
+.fuss-marke { font-family:var(--display); font-style:normal; font-size:clamp(3.2rem, 8vw, 6rem); line-height:.9; letter-spacing:-.03em; padding:.04em .06em .14em 0 }
 .fuss-ort { font-family:var(--sans); font-size:.85rem; letter-spacing:.2em; text-transform:uppercase; color:var(--leise); margin:0 }
 .fuss-unten { display:flex; flex-wrap:wrap; justify-content:space-between; gap:14px 32px; padding-top:24px; font-family:var(--sans); font-size:.9rem }
 .fuss nav { display:flex; flex-wrap:wrap; gap:8px 24px }
@@ -391,7 +393,7 @@ a.status:hover { color:var(--gold) }
   linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 22%) }
 .kurs-hero .wrap { padding-bottom:clamp(48px, 9vh, 110px) }
 .kurs-hero h1 {
-  font-family:var(--serif); font-style:italic; font-size:clamp(3.8rem, 11vw, 10.5rem); line-height:.9; letter-spacing:-.03em; max-width:8.2ch; padding:.04em .14em .14em 0;
+  font-family:var(--display); font-style:normal; font-size:clamp(3.8rem, 11vw, 10.5rem); line-height:.9; letter-spacing:-.03em; max-width:8.2ch; padding:.04em .14em .14em 0;
   background:var(--metall); background-size:240% 100%; background-position:0 0; -webkit-background-clip:text; background-clip:text; color:transparent;
 }
 .kurs-hero .lead { max-width:36ch; margin:1.4rem 0 2rem }
@@ -411,8 +413,8 @@ a.status:hover { color:var(--gold) }
 
 /* Abschnitte der Kursseite benutzen die alten Klassennamen */
 .kurs section:not(.kurs-hero) { padding:clamp(80px, 11vw, 140px) 0; border-top:1px solid var(--linie-zart) }
-.kurs h2 { font-family:var(--serif); font-style:italic; color:var(--champagner); font-size:clamp(2.4rem, 5vw, 4.2rem); line-height:1.04; letter-spacing:-.015em; max-width:17ch }
-.kurs h3 { font-family:var(--serif); font-style:italic; color:var(--champagner); font-size:1.6rem; line-height:1.18 }
+.kurs h2 { font-family:var(--display); font-style:normal; color:var(--champagner); font-size:clamp(2.4rem, 5vw, 4.2rem); line-height:1.04; letter-spacing:-.015em; max-width:17ch }
+.kurs h3 { font-family:var(--display); font-style:normal; color:var(--champagner); font-size:1.6rem; line-height:1.18 }
 .kurs p { max-width:62ch }
 .kurs .lead { color:var(--champagner) }
 .kurs .muted { color:var(--leise) }
@@ -422,7 +424,7 @@ a.status:hover { color:var(--gold) }
 .clip h2 { margin-bottom:1.4rem }
 .facts { display:grid; grid-template-columns:repeat(3, auto); justify-content:start; gap:1.2rem 2.6rem; margin:2rem 0 1.6rem; padding:0 }
 .facts div { border-top:1px solid var(--linie); padding-top:.8rem }
-.facts dt { font-family:var(--serif); font-style:italic; font-size:2.3rem; line-height:1; color:var(--gold) }
+.facts dt { font-family:var(--display); font-style:normal; font-size:2.3rem; line-height:1; color:var(--gold) }
 .facts dd { margin:.45rem 0 0; font-family:var(--sans); font-size:.9rem; color:var(--leise) }
 .video { position:relative; aspect-ratio:16/9; overflow:hidden; background:#000; outline:1px solid var(--linie); outline-offset:10px; margin:10px }
 .video button { all:unset; cursor:pointer; position:absolute; inset:0; display:block }
@@ -443,7 +445,7 @@ a.status:hover { color:var(--gold) }
 .picker button[aria-pressed="true"] { background:rgba(172,130,77,.12); border-color:var(--bronze) }
 .picker button:focus-visible { outline:2px solid var(--gold); outline-offset:2px }
 .picker .name { display:block; font-family:var(--sans); font-weight:600; font-size:1rem; color:var(--champagner); margin-bottom:.35rem }
-.picker .line { display:block; font-family:var(--serif); font-style:italic; font-size:1rem; line-height:1.45; color:var(--text) }
+.picker .line { display:block; font-family:var(--display); font-style:normal; font-size:1rem; line-height:1.45; color:var(--text) }
 .screen { margin:0 }
 .screen .frame { position:relative; aspect-ratio:16/9; overflow:hidden; background:#000; border:1px solid var(--linie) }
 .screen .frame img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity .5s ease }
@@ -470,7 +472,7 @@ a.status:hover { color:var(--gold) }
 .steps li { counter-increment:s; padding:clamp(24px, 3vw, 36px) clamp(16px, 2vw, 26px); border-left:1px solid var(--linie-zart) }
 .steps li:first-child { border-left:0; padding-left:0 }
 .steps li::before {
-  content:"0" counter(s); display:block; font-family:var(--serif); font-style:italic; font-size:2.8rem; line-height:1; margin-bottom:1rem; padding-bottom:.1em;
+  content:"0" counter(s); display:block; font-family:var(--display); font-style:normal; font-size:2.8rem; line-height:1; margin-bottom:1rem; padding-bottom:.1em;
   background:var(--metall); background-size:200% 100%; -webkit-background-clip:text; background-clip:text; color:transparent;
 }
 .steps h3 { font-family:var(--sans); font-style:normal; font-weight:600; font-size:1.12rem; margin-bottom:.4rem }
@@ -481,12 +483,12 @@ a.status:hover { color:var(--gold) }
 .about .grid { display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px, 6vw, 80px); align-items:center }
 .about figure { margin:0; padding:10px; border:1px solid var(--linie) }
 .about figure img { aspect-ratio:4/5; object-fit:cover; object-position:35% 50%; width:100% }
-.about blockquote { margin:2rem 0 0; padding:0 0 0 1.4rem; border-left:1px solid var(--bronze); font-family:var(--serif); font-style:italic; font-size:1.4rem; line-height:1.45; color:var(--champagner); max-width:30ch }
+.about blockquote { margin:2rem 0 0; padding:0 0 0 1.4rem; border-left:1px solid var(--bronze); font-family:var(--display); font-style:normal; font-size:1.4rem; line-height:1.45; color:var(--champagner); max-width:30ch }
 .about blockquote footer { font-family:var(--sans); font-style:normal; font-size:.88rem; color:var(--leise); margin-top:.8rem }
 @media (max-width:860px) { .about .grid { grid-template-columns:1fr } .about figure { order:-1 } .about figure img { aspect-ratio:16/10 } }
 
 .price { background:var(--tafel) }
-.amount { font-family:var(--serif); font-style:italic; line-height:.9; letter-spacing:-.02em; padding-bottom:.08em;
+.amount { font-family:var(--display); font-style:normal; line-height:.9; letter-spacing:-.02em; padding-bottom:.08em;
   background:var(--metall); background-size:220% 100%; -webkit-background-clip:text; background-clip:text; color:transparent }
 .incl { margin:0; padding:0; list-style:none; border-top:1px solid var(--linie-zart) }
 .incl li { display:grid; grid-template-columns:28px 1fr; gap:.6rem; padding:.95rem 0; border-bottom:1px solid var(--linie-zart); font-family:var(--sans); font-size:1rem }
@@ -509,7 +511,7 @@ a.status:hover { color:var(--gold) }
 .faq .grid { display:grid; grid-template-columns:1fr 1.6fr; gap:clamp(32px, 6vw, 80px) }
 .faq details { border-bottom:1px solid var(--linie-zart) }
 .faq details:first-child { border-top:1px solid var(--linie-zart) }
-.faq summary { list-style:none; cursor:pointer; padding:1.3rem 2.4rem 1.3rem 0; position:relative; font-family:var(--serif); font-style:italic; font-size:1.3rem; color:var(--champagner) }
+.faq summary { list-style:none; cursor:pointer; padding:1.3rem 2.4rem 1.3rem 0; position:relative; font-family:var(--display); font-style:normal; font-size:1.3rem; color:var(--champagner) }
 .faq summary::-webkit-details-marker { display:none }
 .faq summary::after { content:""; position:absolute; right:6px; top:50%; width:11px; height:11px; margin-top:-8px; border-right:1px solid var(--gold); border-bottom:1px solid var(--gold); transform:rotate(45deg); transition:transform .3s var(--ease) }
 .faq details[open] summary::after { transform:rotate(-135deg); margin-top:-2px }
@@ -522,7 +524,7 @@ a.status:hover { color:var(--gold) }
 
 .nav { position:absolute; inset:0 0 auto 0; z-index:10 }
 .nav .wrap { display:flex; align-items:center; justify-content:space-between; gap:20px; height:84px }
-.nav .logo { font-family:var(--serif); font-style:italic; font-size:1.7rem; letter-spacing:-.01em; padding:.05em .06em .12em 0;
+.nav .logo { font-family:var(--display); font-style:normal; font-size:1.7rem; letter-spacing:-.01em; padding:.05em .06em .12em 0;
   background:var(--metall); background-size:220% 100%; background-position:18% 0; -webkit-background-clip:text; background-clip:text; color:transparent }
 .nav .btn { min-height:44px; padding:0 1.2em; font-size:.92rem }
 
@@ -534,7 +536,7 @@ footer.site a:hover { color:var(--gold) }
 
 .legal { padding:150px 0 100px }
 .legal .wrap { max-width:860px }
-.legal h1 { font-family:var(--serif); font-style:italic; color:var(--champagner); font-size:clamp(2.6rem, 6vw, 4rem); line-height:1.05; margin-bottom:2rem }
+.legal h1 { font-family:var(--display); font-style:normal; color:var(--champagner); font-size:clamp(2.6rem, 6vw, 4rem); line-height:1.05; margin-bottom:2rem }
 .legal h2 { font-family:var(--sans); font-weight:600; font-size:1.15rem; color:var(--champagner); margin:2.4rem 0 .8rem }
 .legal h3 { font-family:var(--sans); font-weight:600; font-size:1.02rem; color:var(--champagner); margin:1.8rem 0 .6rem }
 .legal p, .legal li { font-family:var(--sans); font-size:1rem; line-height:1.7; color:var(--text); max-width:72ch }
@@ -551,11 +553,38 @@ footer.site a:hover { color:var(--gold) }
 
 .thanks { min-height:100svh; display:grid; align-items:center; padding:120px 0 80px;
   background:linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.9) 55%, #000 100%), url(../img/hero-portal.jpg) center 30%/cover no-repeat }
-.thanks h1 { font-family:var(--serif); font-style:italic; color:var(--champagner); font-size:clamp(2.8rem, 7vw, 5rem); line-height:1.02; margin-bottom:1.2rem }
+.thanks h1 { font-family:var(--display); font-style:normal; color:var(--champagner); font-size:clamp(2.8rem, 7vw, 5rem); line-height:1.02; margin-bottom:1.2rem }
 .thanks .lead { color:var(--champagner) }
 .thanks .muted { font-family:var(--sans); color:var(--leise); font-size:.98rem }
 .thanks .muted a { color:var(--gold) }
 .thanks ol { list-style:none; counter-reset:s; padding:0; margin:2.4rem 0 2rem; display:grid; gap:1.1rem; max-width:640px }
 .thanks ol li { counter-increment:s; display:grid; grid-template-columns:2.6rem 1fr; gap:.4rem; font-family:var(--sans); color:var(--text) }
-.thanks ol li::before { content:counter(s); font-family:var(--serif); font-style:italic; font-size:1.8rem; line-height:1.05; color:var(--gold) }
+.thanks ol li::before { content:counter(s); font-family:var(--display); font-style:normal; font-size:1.8rem; line-height:1.05; color:var(--gold) }
 .thanks .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:2rem }
+
+/* =========================================================
+   Moderne Typo: Gewichte und Laufweite für Inter Display
+   ========================================================= */
+h1, h2, h3, h4 { font-weight:500 }
+.titel, .kurs h2, .legal h1, .thanks h1 { font-weight:500; letter-spacing:-.035em; line-height:1.02 }
+.titel { font-size:clamp(2.4rem, 5.2vw, 4.4rem) }
+.marke { font-weight:600; letter-spacing:-.07em; line-height:.84; font-size:clamp(5rem, 27vw, 24rem); margin-left:-.055em; padding-right:.04em }
+.logo-marke, .nav .logo { font-weight:600; letter-spacing:-.045em; font-size:1.65rem }
+.fuss-marke { font-weight:600; letter-spacing:-.06em }
+.ekklesia-wort { font-weight:600; letter-spacing:-.065em; padding-inline:.04em }
+.kurs-hero h1 { font-weight:600; letter-spacing:-.06em; line-height:.9; max-width:9ch; padding-right:.06em }
+.zitat blockquote { font-weight:300; letter-spacing:-.025em; line-height:1.16 }
+.about blockquote { font-weight:300; letter-spacing:-.01em }
+.weg-nr, .steps li::before { font-weight:300; letter-spacing:-.04em }
+.zahlen strong, .facts dt, .amount { font-weight:500; letter-spacing:-.04em }
+.weg-liste h3, .clip-info h3, .clip-karte h3, .kurs h3, .kontakt-liste strong, .tafel-box li b, .faq summary { font-weight:500; letter-spacing:-.02em }
+.weg-liste h3 { font-size:clamp(1.4rem, 1.9vw, 1.7rem) }
+.clip-karte h3 { font-size:1.35rem }
+.kontakt-liste strong { font-size:clamp(1.25rem, 2vw, 1.7rem) }
+.faq summary { font-size:1.15rem }
+.picker .line { font-family:var(--sans); font-size:.96rem }
+.hero-lead { font-size:clamp(1.12rem, 1.45vw, 1.32rem) }
+.lead { font-size:clamp(1.08rem, 1.35vw, 1.22rem) }
+.kopf-nav > a:not(.btn) { font-size:.95rem }
+@media (max-width:900px) { .kopf-nav > a:not(.btn) { font-family:var(--display); font-weight:500; letter-spacing:-.03em } }
+@media (max-width:760px) { .hero > h1 .marke { font-size:34vw } }
