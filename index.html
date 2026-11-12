@@ -3,260 +3,325 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Рисовать светом — курс Aziel Timur по AI-клипам</title>
-<meta name="description" content="Курс Aziel Timur: от основ фотографии до AI-клипа на YouTube. Два PDF и живой урок в Discord на 120 минут на примере клипа «ЫРАЙЫМЫҢ ТҮБӨЛҮК».">
-<meta name="theme-color" content="#091D23">
+<title>Aziel Timur — кыргызский артист, режиссёр клипов и фотограф</title>
+<meta name="description" content="Aziel Timur — кыргызский артист из Франкфурта. Христианский хип-хоп и поклонение на кыргызском, AI-клипы, которые смотрит вся страна, альбом «Экклесия».">
+<meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://aziel.me/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://aziel.me/">
-<meta property="og:title" content="Рисовать светом — курс Aziel Timur">
-<meta property="og:description" content="Как снимать AI-клипы, которые смотрит вся страна. От основ фотографии до готового видео на YouTube.">
-<meta property="og:image" content="https://aziel.me/assets/img/og.jpg">
+<meta property="og:title" content="Aziel Timur — соединять точки">
+<meta property="og:description" content="Кыргызский артист и режиссёр клипов. Хип-хоп, традиция и вера в одной картине.">
+<meta property="og:image" content="https://aziel.me/assets/img/og-home.jpg">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/prata.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/aziel-serif-italic.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/aziel-serif.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="assets/fonts/golos.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=202610311042">
+<link rel="stylesheet" href="assets/css/style.css?v=202611121">
+<script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Course","name":"Рисовать светом","description":"Курс по фотографии и AI-клипам: два PDF и живой урок в Discord на 120 минут.","inLanguage":"ru","provider":{"@type":"Person","name":"Aziel Timur","url":"https://aziel.me","sameAs":["https://www.instagram.com/aziel_timur"]},"offers":{"@type":"AggregateOffer","lowPrice":"99","highPrice":"299","offerCount":"2","priceCurrency":"USD","url":"https://aziel.me/#price","availability":"https://schema.org/InStock"}}
+{"@context":"https://schema.org","@type":"Person","name":"Aziel Timur","alternateName":"Aziel","url":"https://aziel.me/","jobTitle":"Артист, режиссёр клипов, фотограф","birthPlace":"Бишкек","homeLocation":{"@type":"Place","name":"Франкфурт-на-Майне"},"sameAs":["https://www.instagram.com/aziel_timur","https://www.youtube.com/@azielme"]}
 </script>
 </head>
 <body>
 <a class="skip" href="#main">К содержанию</a>
 
-<header class="nav">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="orn" viewBox="0 0 120 60"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M60 58V26C60 12 48 4 36 6C22 8 16 22 22 32C27 41 40 40 42 31C44 24 37 19 32 23"/><path d="M60 26C60 12 72 4 84 6C98 8 104 22 98 32C93 41 80 40 78 31C76 24 83 19 88 23"/><path d="M60 46C54 40 44 42 44 50C44 55 50 57 53 53"/><path d="M60 46C66 40 76 42 76 50C76 55 70 57 67 53"/></g><circle cx="60" cy="20" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="play" viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z"/></symbol>
+</svg>
+
+<header class="kopf" id="kopf">
   <div class="wrap">
-    <a class="logo" href="#top">Aziel Timur</a>
-    <ul>
-      <li><a href="#clip">Клип</a></li>
-      <li><a href="#program">Программа</a></li>
-      <li><a href="#price">Цена</a></li>
-      <li><a href="#faq">Вопросы</a></li>
-    </ul>
-    <a class="btn btn-red" href="#price">Купить курс</a>
+    <a class="logo" href="./" aria-label="Aziel Timur — на главную"><span class="logo-marke">Aziel</span><span class="logo-zusatz">Timur</span></a>
+    <button class="menue-knopf" type="button" aria-expanded="false" aria-controls="menue" aria-label="Меню"><span></span><span></span><span></span></button>
+    <nav class="kopf-nav" id="menue" aria-label="Главное меню">
+      <a href="#obo-mne">Обо мне</a>
+      <a href="#put">История</a>
+      <a href="#klipy">Клипы</a>
+      <a href="#ekklesia">Альбом</a>
+      <a href="support/">Поддержать</a>
+      <a class="btn btn--gold" href="kurs/">Курс по AI-клипам</a>
+    </nav>
   </div>
 </header>
 
 <main id="main">
 
-<section class="hero" id="top">
-  <picture>
-    <source media="(max-width:700px)" srcset="assets/img/hero-portal-m.jpg">
-    <img src="assets/img/hero-portal.jpg" alt="Три женщины в кыргызских национальных костюмах — силуэты на фоне светящегося проёма. Кадр из клипа Aziel." fetchpriority="high">
-  </picture>
-  <div class="wrap">
-    <h1>Рисовать светом</h1>
-    <p class="lead">Курс Aziel Timur: как снимать AI-клипы, которые смотрит вся страна. От основ фотографии до готового видео на YouTube.</p>
-    <div class="actions">
-      <a class="btn btn-red" href="#price">Купить курс · от 99 $</a>
-      <a class="btn btn-ghost" href="#clip">Смотреть клип</a>
-    </div>
-    <p class="note">Курс на русском. Подходит без опыта.</p>
-  </div>
-</section>
+<section class="hero" aria-label="Aziel Timur">
+  <figure class="hero-bild">
+    <img src="assets/img/shot-closeup.jpg" alt="Герой клипов Aziel крупным планом, за ним — женщины в кыргызских национальных костюмах" fetchpriority="high">
+  </figure>
 
-<section class="clip" id="clip">
-  <div class="wrap grid">
-    <div>
-      <h2>Без камеры, без актёров, без съёмочного дня</h2>
-      <p class="lead">«ЫРАЙЫМЫҢ ТҮБӨЛҮК» разошёлся по всему Кыргызстану. Каждый человек, костюм и луч света в нём созданы нейросетью — по методу, который ты разберёшь в курсе шаг за шагом.</p>
-      <dl class="facts">
-        <div><dt>2:37</dt><dd>длина песни</dd></div>
-        <div><dt>3 дня</dt><dd>от идеи до YouTube</dd></div>
-        <div><dt>200 €</dt><dd>примерный бюджет</dd></div>
-      </dl>
-      <p class="muted">Клип Aziel уже показали в эфире музыкального телеканала в Казахстане.</p>
-    </div>
-    <div>
-      <div class="video" id="video">
-        <button type="button" aria-label="Смотреть клип «ЫРАЙЫМЫҢ ТҮБӨЛҮК» на YouTube">
-          <img src="assets/img/clip-final.jpg" alt="" loading="lazy">
-          <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l16 9-16 9z"/></svg></span>
-        </button>
+  <svg class="siegel" viewBox="0 0 200 200" aria-hidden="true">
+    <defs><path id="kreis" d="M100 100m-78 0a78 78 0 1 1 156 0a78 78 0 1 1-156 0"/></defs>
+    <circle cx="100" cy="100" r="96" fill="#000" stroke="currentColor" stroke-opacity=".55"/>
+    <circle cx="100" cy="100" r="62" fill="none" stroke="currentColor" stroke-opacity=".35"/>
+    <g class="ring"><text font-family="Golos Text, sans-serif" font-size="12.5" letter-spacing="2.2" fill="currentColor"><textPath href="#kreis" textLength="486" lengthAdjust="spacing">AZIEL TIMUR · ДАҢКТОО · БИШКЕК — ФРАНКФУРТ ·</textPath></text></g>
+    <use href="#orn" x="68" y="84" width="64" height="32" color="#d6bc88"/>
+  </svg>
+
+  <div class="wrap hero-inhalt">
+    <div class="hero-text">
+      <p class="eyebrow">Артист · режиссёр клипов · фотограф</p>
+      <p class="hero-lead">Я соединяю хип-хоп, традицию моего народа и веру в одну картину. Песни на&nbsp;кыргызском — и&nbsp;клипы, которые смотрит вся страна.</p>
+      <a class="status" href="#ekklesia">Альбом «Экклесия» — уже на&nbsp;всех площадках</a>
+      <div class="hero-cta">
+        <a class="btn btn--gold" href="#klipy"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#play"/></svg>Смотреть клипы</a>
+        <a class="btn" href="kurs/">Курс «Рисовать светом»</a>
       </div>
-      <p class="video-cap">Видео загрузится с YouTube после нажатия.</p>
     </div>
   </div>
+
+  <h1 class="wrap"><span class="marke" aria-hidden="true">Aziel</span><span class="sr-only">Aziel Timur — кыргызский артист, режиссёр клипов и фотограф</span></h1>
 </section>
 
-<section class="frames" aria-labelledby="frames-h">
+<div class="zahlen">
+  <ul class="wrap">
+    <li class="auftauchen"><strong>600&nbsp;000+</strong><span>просмотров на&nbsp;YouTube</span></li>
+    <li class="auftauchen" data-verzoegerung="1"><strong>360&nbsp;000+</strong><span>у&nbsp;клипа «Ырайымың түбөлүк»</span></li>
+    <li class="auftauchen" data-verzoegerung="2"><strong>Эфир&nbsp;ТВ</strong><span>клип показали на&nbsp;музыкальном канале в&nbsp;Казахстане</span></li>
+    <li class="auftauchen" data-verzoegerung="3"><strong>«Экклесия»</strong><span>альбом вышел осенью 2026&nbsp;года</span></li>
+  </ul>
+</div>
+
+<section class="abschnitt" id="obo-mne" aria-labelledby="ich-h">
   <div class="wrap">
-    <div class="head">
-      <h2 id="frames-h">Как слова становятся кадром</h2>
-      <p class="lead">Нейросеть делает ровно то, что ты описал. Каждый из этих кадров сначала был написан словами — языком фотографа.</p>
-    </div>
-    <div class="stage">
-      <ul class="picker" role="list">
-        <li><button type="button" aria-pressed="true" data-i="0"><span class="name">Крупный план</span><span class="line">Лицо крупно справа, фигуры маленькие вдали</span></button></li>
-        <li><button type="button" aria-pressed="false" data-i="1"><span class="name">Перевод фокуса</span><span class="line">Резкость переходит с одного плана на другой</span></button></li>
-        <li><button type="button" aria-pressed="false" data-i="2"><span class="name">Ряд профилей</span><span class="line">Профили уходят в глубину кадра</span></button></li>
-        <li><button type="button" aria-pressed="false" data-i="3"><span class="name">Финал</span><span class="line">Общий план, все взгляды в объектив</span></button></li>
-      </ul>
-      <figure class="screen">
-        <div class="frame">
-          <img class="on" src="assets/img/shot-closeup.jpg" alt="Крупный план героя справа, три женщины размыты слева вдалеке">
-          <img src="assets/img/shot-rackfocus.jpg" alt="Профиль героя в фокусе, женщины размыты за ним" loading="lazy">
-          <img src="assets/img/shot-profiles.jpg" alt="Ряд женских профилей в национальных головных уборах, уходящий в глубину" loading="lazy">
-          <img src="assets/img/clip-final.jpg" alt="Герой с раскрытыми руками перед девятью женщинами в студии" loading="lazy">
-        </div>
-        <figcaption id="frame-cap" aria-live="polite">Лицо справа, три фигуры слева вдалеке — правило третей и малая глубина резкости.</figcaption>
+    <div class="ich-raster">
+      <div class="ich-text">
+        <p class="eyebrow auftauchen">Обо мне</p>
+        <h2 class="titel auftauchen" id="ich-h">Соединять точки</h2>
+        <p class="lead auftauchen">Я не играю ни на одном инструменте. Я не звукорежиссёр, не программист и не художник. И всё же каждая моя песня и каждый клип — мои, от первой секунды до последней.</p>
+        <p class="auftauchen">Потому что моя работа — видеть целое раньше, чем оно появится. Слово, бит, свет, костюм, лицо в&nbsp;кадре, тишина между строками — у&nbsp;каждой части есть свой мастер, и&nbsp;каждый — лучший на&nbsp;своём месте. Я&nbsp;стою там, где всё это сходится, и&nbsp;соединяю точки, пока картина не оживёт.</p>
+        <p class="auftauchen">Стив Джобс не паял платы, но собрал из&nbsp;гениальных деталей вещь, которой до&nbsp;него не было. Рик Рубин честно признаётся, что не владеет техникой: ему платят за&nbsp;уверенность во&nbsp;вкусе и&nbsp;за&nbsp;умение выразить то, что он чувствует. Мне близок этот путь. В&nbsp;шутку я&nbsp;называю себя Риком Рубином из&nbsp;Кыргызстана — но&nbsp;в&nbsp;каждой шутке есть доля правды.</p>
+        <p class="auftauchen">Я родился в&nbsp;Бишкеке, до&nbsp;двенадцати лет рос в&nbsp;айыле у&nbsp;бабушки с&nbsp;дедушкой, а&nbsp;потом переехал в&nbsp;Германию. Сегодня живу во&nbsp;Франкфурте. Две культуры, два языка, две половины жизни — когда-то это казалось разными точками. Теперь я&nbsp;вижу, как они соединяются.</p>
+      </div>
+      <figure class="rahmen ich-bild auftauchen" data-verzoegerung="1">
+        <img src="assets/img/desert-planes.jpg" alt="Герой клипа Aziel в профиле, вдали — девять женщин в национальных костюмах перед меловой скалой" loading="lazy">
       </figure>
     </div>
-    <p class="foot">Как описать такой кадр словами — разбираем в курсе, приём за приёмом.</p>
+
+    <div class="zitat auftauchen">
+      <div class="ornament" aria-hidden="true"><svg viewBox="0 0 120 60"><use href="#orn"/></svg></div>
+      <blockquote>Я не играю на&nbsp;инструменте. Я&nbsp;слышу, как должен звучать весь оркестр.</blockquote>
+      <cite>Aziel</cite>
+    </div>
   </div>
 </section>
 
-<section class="program light" id="program">
+<section class="abschnitt abschnitt--linie" id="put" aria-labelledby="put-h">
   <div class="wrap">
-    <h2>Два PDF и живой урок</h2>
-    <p class="lead">Сначала — язык света и кадра. Потом — весь путь клипа на настоящих примерах, от листа персонажа до экспорта для YouTube.</p>
-    <div class="parts">
-      <article class="part">
-        <h3>Часть первая. Basics</h3>
-        <p class="meta">27 страниц, 19 глав с иллюстрациями и практикой</p>
-        <ul>
-          <li>Свет: качество, направление, цвет, время суток</li>
-          <li>Экспозиция: диафрагма, выдержка, ISO</li>
-          <li>Композиция, планы и ракурсы</li>
-          <li>Объективы, фокус и резкость</li>
-          <li>Цвет и основы обработки</li>
-          <li>Язык фотографии в промптах</li>
-        </ul>
-        <div class="pages">
-          <img src="assets/img/pv1-1.jpg" alt="Обложка первой части курса" loading="lazy">
-          <img src="assets/img/pv1-4.jpg" alt="Первая глава: фотография — это рисунок светом" loading="lazy">
-          <img src="assets/img/pv1-11.jpg" alt="Глава о времени суток для съёмки" loading="lazy">
-        </div>
-      </article>
-      <article class="part">
-        <h3>Часть вторая. AI-клип</h3>
-        <p class="meta">39 страниц, 13 глав на примере «ЫРАЙЫМЫҢ ТҮБӨЛҮК»</p>
-        <ul>
-          <li>Инструменты, бюджет и сроки клипа</li>
-          <li>Анатомия промпта и метод слоёв</li>
-          <li>Один персонаж во всех сценах</li>
-          <li>Видео и липсинк: герой поёт твою песню</li>
-          <li>Свет, глубина, позы и перформанс</li>
-          <li>Монтаж под оригинал песни и экспорт для YouTube</li>
-          <li>Шаблоны промптов и все оригинальные промпты клипа</li>
-        </ul>
-        <div class="pages">
-          <img src="assets/img/pv2-1.jpg" alt="Обложка второй части курса" loading="lazy">
-          <img src="assets/img/pv2-2.jpg" alt="Вступление: идея важнее инструмента" loading="lazy">
-          <img src="assets/img/pv2-16.jpg" alt="Глава «Галерея света»" loading="lazy">
-        </div>
-      </article>
-    </div>
-    <div class="live">
-      <img src="assets/img/desert-planes.jpg" alt="Герой в профиле на первом плане, девять женщин в национальных костюмах перед меловой скалой" loading="lazy">
-      <div class="txt">
-        <h3>Урок в Discord · 120 минут</h3>
-        <p>В варианте «PDF + урок». Один живой урок с демонстрацией экрана. Aziel показывает весь процесс на своих готовых проектах — программы, промпты, референсы и рабочие секреты — и разбирает твои кадры.</p>
+    <div class="abschnitt-kopf">
+      <div>
+        <p class="eyebrow auftauchen">История</p>
+        <h2 class="titel auftauchen" id="put-h">Как я пришёл к&nbsp;музыке</h2>
       </div>
+      <p class="lead auftauchen" data-verzoegerung="1">Долгое время я&nbsp;только слушал музыку. Мне и&nbsp;в&nbsp;голову не приходило, что однажды я&nbsp;буду делать её сам.</p>
     </div>
-  </div>
-</section>
 
-<section class="how" aria-labelledby="how-h">
-  <div class="wrap">
-    <h2 id="how-h">Как начать</h2>
-    <ol class="steps">
-      <li><h3>Выбери вариант</h3><p>PDF за 99 $ или PDF + урок в Discord за 299 $. Оплата картой, Apple Pay или Google Pay.</p></li>
-      <li><h3>Получи письмо</h3><p>В течение 24 часов: оба PDF, а с уроком — ещё и приглашение в Discord.</p></li>
-      <li><h3>Начни с Basics</h3><p>Даже если никогда не держал камеру.</p></li>
-      <li><h3>Урок в Discord</h3><p>В варианте за 299 $: 120 минут, весь путь клипа и разбор твоих первых кадров.</p></li>
+    <ol class="weg-liste">
+      <li class="auftauchen">
+        <span class="weg-nr metall-text">01</span>
+        <h3>Год экспериментов</h3>
+        <p>Всё началось с&nbsp;любопытства. Целый год я&nbsp;пробовал, смешивал жанры, ломал правила и&nbsp;искал своё звучание. Это была чистая радость — игра без цели и&nbsp;без страха ошибиться.</p>
+      </li>
+      <li class="auftauchen" data-verzoegerung="1">
+        <span class="weg-nr metall-text">02</span>
+        <h3>Родной язык</h3>
+        <p>Потом я&nbsp;заметил пустоту: хороших христианских песен на&nbsp;кыргызском почти не было — таких, которые хочется слушать снова и&nbsp;снова. И&nbsp;я&nbsp;начал писать сам, на&nbsp;языке, на&nbsp;котором со&nbsp;мной говорили в&nbsp;детстве.</p>
+      </li>
+      <li class="auftauchen" data-verzoegerung="2">
+        <span class="weg-nr metall-text">03</span>
+        <h3>Клипы</h3>
+        <p>Песне нужен был образ. Без камеры, без актёров и&nbsp;без съёмочного дня — только видение, свет и&nbsp;нейросеть как кисть. «Ырайымың түбөлүк» разошёлся по&nbsp;всему Кыргызстану, а&nbsp;клип показали в&nbsp;эфире музыкального канала в&nbsp;Казахстане.</p>
+      </li>
+      <li class="auftauchen" data-verzoegerung="3">
+        <span class="weg-nr metall-text">04</span>
+        <h3>«Экклесия»</h3>
+        <p>Осенью 2026&nbsp;года вышел мой альбом «Экклесия» — песни поклонения на&nbsp;кыргызском, которые звучат по-новому и&nbsp;остаются нашими. И&nbsp;это только начало.</p>
+      </li>
     </ol>
   </div>
 </section>
 
-<section class="about light" aria-labelledby="about-h">
-  <div class="wrap grid">
-    <div>
-      <h2 id="about-h">Aziel Timur</h2>
-      <p class="lead" style="margin-top:1.2rem">Кыргызский артист и режиссёр клипов, живёт во Франкфурте. Шесть лет в фотографии, больше двух лет работает с нейросетями.</p>
-      <p>Его клипы на кыргызском соединяют хип-хоп, традицию и веру. Нейросеть для него — инструмент, а видение и вкус — свои.</p>
-      <blockquote>Я хотел сделать то, чего в СНГ ещё никто не делал: что-то новое, смелое, дерзкое.<footer>Aziel о клипе «ЫРАЙЫМЫҢ ТҮБӨЛҮК»</footer></blockquote>
-      <p style="margin-top:2rem; display:flex; flex-wrap:wrap; gap:12px"><a class="btn btn-ghost" href="https://www.instagram.com/aziel_timur" rel="noopener">Instagram @aziel_timur</a><a class="btn btn-ghost" href="support/">Поддержать Aziel</a></p>
-    </div>
-    <figure><img src="assets/img/about-silhouette.jpg" alt="Силуэт героя клипов Aziel на фоне светлого неба — кадр из клипа «ПАДЫШАМ»" loading="lazy"></figure>
-  </div>
-</section>
-
-<section class="price" id="price" aria-labelledby="price-h">
+<section class="abschnitt abschnitt--linie clips" id="klipy" aria-labelledby="klipy-h">
   <div class="wrap">
-    <h2 id="price-h">Выбери вариант</h2>
-    <p class="muted" style="margin-top:1rem">Одна оплата, без подписки.</p>
-    <div class="plans">
-      <article class="plan">
-        <h3>PDF</h3>
-        <p class="plan-sub">Учишься сам, в своём темпе</p>
-        <div class="amount">99 $</div>
-        <ul class="incl">
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Часть 1. Basics — PDF</span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Часть 2. AI-клип — PDF</span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Все оригинальные промпты клипа</span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Шаблоны промптов для своих клипов</span></li>
-        </ul>
-        <div class="actions">
-          <a class="btn btn-ghost" href="https://buy.stripe.com/28EbJ1bHb0hC1Z59M47Re02?locale=ru" rel="noopener">Купить PDF за 99 $</a>
-        </div>
-      </article>
-      <article class="plan plan-main">
-        <span class="plan-tag">С Aziel</span>
-        <h3>PDF + урок</h3>
-        <p class="plan-sub">Весь курс и живой разбор</p>
-        <div class="amount">299 $</div>
-        <ul class="incl">
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Всё из варианта «PDF»</span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Живой урок в Discord, 120 минут</span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Разбор твоих кадров и промптов</span></li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Рабочие секреты Aziel на его проектах</span></li>
-        </ul>
-        <div class="actions">
-          <a class="btn btn-red" href="https://buy.stripe.com/cNidR94eJ7K4avBf6o7Re00?locale=ru" rel="noopener">Купить за 299 $</a>
-        </div>
-      </article>
+    <div class="abschnitt-kopf">
+      <div>
+        <p class="eyebrow auftauchen">Клипы</p>
+        <h2 class="titel auftauchen" id="klipy-h">Слово, ставшее кадром</h2>
+      </div>
+      <p class="lead auftauchen" data-verzoegerung="1">Каждый кадр сначала появляется у&nbsp;меня внутри, потом — словами и&nbsp;только потом — на&nbsp;экране. Кыргызская традиция, хип-хоп и&nbsp;вера в&nbsp;одном кадре.</p>
     </div>
-    <div class="plans-foot">
-      <p class="small">Оплата через Stripe: карта, Apple Pay или Google Pay. Покупая курс, ты принимаешь <a href="agb.html#ru">условия покупки</a>. Подписки на нейросети оплачиваются отдельно: клип длиной 2:37 обошёлся примерно в 200 €.</p>
-      <a class="btn btn-ghost" href="https://ig.me/m/aziel_timur" rel="noopener">Есть вопрос? Instagram</a>
+
+    <div class="clip-gross">
+      <div class="rahmen auftauchen">
+        <button class="video-knopf" type="button" data-video="KwhI8lrwSGo" data-titel="ЫРАЙЫМЫҢ ТҮБӨЛҮК — Aziel">
+          <img src="assets/img/clip-final.jpg" alt="Финал клипа «Ырайымың түбөлүк»: герой с раскрытыми руками среди женщин в национальных костюмах" loading="lazy">
+          <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></span>
+          <span class="video-dauer">2:38</span>
+          <span class="sr-only">Смотреть клип «Ырайымың түбөлүк»</span>
+        </button>
+      </div>
+      <div class="clip-info auftauchen" data-verzoegerung="1">
+        <h3>Ырайымың түбөлүк</h3>
+        <p class="uebersetzung">«Милость Твоя вечна»</p>
+        <p>Американский хип-хоп и&nbsp;кыргызская традиция в&nbsp;одном клипе. Я&nbsp;хотел сделать то, чего в&nbsp;СНГ ещё никто не делал: новое, смелое, дерзкое. Больше 360&nbsp;000 просмотров.</p>
+      </div>
+    </div>
+
+    <ul class="clip-raster">
+      <li class="clip-karte auftauchen">
+        <button class="video-knopf" type="button" data-video="FiWkIo0mKk4" data-titel="МАШАЯК (Messiah) — Aziel">
+          <img src="assets/img/v-mashayak.jpg" alt="Кадр из клипа «Машаяк»: девушка в белой шубе держит ягнёнка на фоне гор" loading="lazy">
+          <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></span>
+          <span class="video-dauer">3:48</span>
+          <span class="sr-only">Смотреть клип «Машаяк»</span>
+        </button>
+        <h3>Машаяк</h3>
+        <p>«Мессия» · больше 100&nbsp;000 просмотров</p>
+      </li>
+      <li class="clip-karte auftauchen" data-verzoegerung="1">
+        <button class="video-knopf" type="button" data-video="-JEEfQSoaEs" data-titel="СЕНДЕ — Aziel">
+          <img src="assets/img/v-sende.jpg" alt="Кадр из клипа «Сенде»: герой в платке на красном фоне" loading="lazy">
+          <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></span>
+          <span class="video-dauer">2:41</span>
+          <span class="sr-only">Смотреть клип «Сенде»</span>
+        </button>
+        <h3>Сенде</h3>
+        <p>«В&nbsp;Тебе» · песня, которую я&nbsp;почти не выпустил</p>
+      </li>
+      <li class="clip-karte auftauchen" data-verzoegerung="2">
+        <button class="video-knopf" type="button" data-video="nF0Dyoi3bXo" data-titel="ПАДЫШАМ — Aziel">
+          <img src="assets/img/v-padysham.jpg" alt="Кадр из клипа «Падышам»: девушка в серебряном головном уборе" loading="lazy">
+          <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></span>
+          <span class="video-dauer">2:11</span>
+          <span class="sr-only">Смотреть клип «Падышам»</span>
+        </button>
+        <h3>Падышам</h3>
+        <p>«Мой Царь» · о&nbsp;власти имени Иисуса</p>
+      </li>
+      <li class="clip-karte auftauchen" data-verzoegerung="3">
+        <button class="video-knopf" type="button" data-video="km4tjLqnDDQ" data-titel="Атанын жүрөгү — Aziel">
+          <img src="assets/img/v-atanyn.jpg" alt="Обложка песни «Атанын жүрөгү»: красное сердце на белой пластинке" loading="lazy">
+          <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#play"/></svg></span>
+          <span class="video-dauer">4:41</span>
+          <span class="sr-only">Слушать песню «Атанын жүрөгү»</span>
+        </button>
+        <h3>Атанын жүрөгү</h3>
+        <p>«Сердце Отца» · по&nbsp;15-й главе Евангелия от&nbsp;Луки</p>
+      </li>
+    </ul>
+
+    <div class="clips-fuss">
+      <a class="pfeil" href="https://www.youtube.com/@azielme" rel="noopener">Все видео на&nbsp;YouTube <span aria-hidden="true">→</span></a>
+      <p>Видео загружается с&nbsp;YouTube только после нажатия.</p>
     </div>
   </div>
 </section>
 
-<section class="faq" id="faq" aria-labelledby="faq-h">
-  <div class="wrap grid">
-    <h2 id="faq-h">Вопросы</h2>
-    <div>
-      <details><summary>Нужен ли опыт в фотографии?</summary><p>Нет. Часть 1 начинается с нуля: что такое свет, кадр и экспозиция. Этот язык потом превращается в точные промпты.</p></details>
-      <details><summary>Какой нужен компьютер?</summary><p>Mac или Windows и стабильный интернет. Картинки и видео создаются в браузере, монтаж — в бесплатной программе.</p></details>
-      <details><summary>Сколько стоят нейросети?</summary><p>Подписки оплачиваются отдельно. Клип «ЫРАЙЫМЫҢ ТҮБӨЛҮК» длиной 2:37 обошёлся примерно в 200 €. В курсе есть формула, по которой ты посчитаешь бюджет своего клипа.</p></details>
-      <details><summary>На каком языке курс?</summary><p>PDF и урок — на русском.</p></details>
-      <details><summary>Чем отличаются варианты?</summary><p>«PDF» — обе части курса, все промпты и шаблоны: учишься сам. «PDF + урок» — плюс 2 часа в Discord с Aziel: он показывает процесс на своих проектах и разбирает твои кадры. Начал с PDF и захотел урок — напиши Aziel.</p></details>
-      <details><summary>Как оплатить?</summary><p>Кнопкой «Купить» в нужном варианте: картой, Apple Pay или Google Pay через Stripe. Stripe может показать цену в твоей валюте. Если карта не проходит, напиши Aziel в Instagram — найдёте другой способ.</p></details>
-      <details><summary>Как проходит урок?</summary><p>Один урок на 120 минут в Discord, с демонстрацией экрана. Время выбираете вместе. Aziel показывает весь процесс на своих готовых проектах — от листа персонажа до монтажа — и отвечает на вопросы.</p></details>
+<section class="abschnitt abschnitt--linie ekklesia" id="ekklesia" aria-labelledby="ekk-h">
+  <div class="wrap">
+    <p class="eyebrow auftauchen" style="justify-content:center">Альбом · 2026</p>
+    <h2 id="ekk-h" class="auftauchen"><span class="ekklesia-wort metall-text">Экклесия</span></h2>
+    <p class="lead auftauchen">Я&nbsp;не пишу песен, которые учат или пугают. Я&nbsp;пишу поклонение.</p>
+    <p class="auftauchen">Для меня это не жанр, а&nbsp;оружие: когда звучит хвала, меняется сама атмосфера — в&nbsp;комнате, в&nbsp;сердце, вокруг нас. В&nbsp;Новом Завете словом «экклесия» называют церковь — тех, кого Бог позвал и&nbsp;собрал вместе. Этот альбом — для них.</p>
+    <div class="hero-cta auftauchen">
+      <a class="btn btn--gold" href="https://www.youtube.com/@azielme" rel="noopener">Слушать</a>
+      <a class="btn" href="https://www.instagram.com/aziel_timur" rel="noopener">Instagram @aziel_timur</a>
     </div>
+
+    <div class="bildband-raster">
+      <figure class="rahmen auftauchen">
+        <img src="assets/img/shot-profiles.jpg" alt="Ряд женских профилей в кыргызских национальных головных уборах" loading="lazy">
+        <figcaption>Традиция, которую я&nbsp;ношу с&nbsp;собой: кадр из&nbsp;«Ырайымың түбөлүк»</figcaption>
+      </figure>
+      <figure class="rahmen bild--klein auftauchen" data-verzoegerung="1">
+        <img src="assets/img/about-silhouette.jpg" alt="Силуэт героя клипов Aziel на фоне светлого неба" loading="lazy" style="object-position:38% 50%">
+        <figcaption>Свет и&nbsp;тишина: кадр из&nbsp;«Падышам»</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt abschnitt--linie" id="kurs" aria-labelledby="kurs-h">
+  <div class="wrap">
+    <div class="tafel-box auftauchen">
+      <figure class="bild"><img src="assets/img/hero-portal.jpg" alt="Три женские фигуры в национальных костюмах — силуэты в светящемся проёме" loading="lazy"></figure>
+      <div class="inhalt">
+        <p class="eyebrow">Курс</p>
+        <h2 class="titel" id="kurs-h">Рисовать светом</h2>
+        <p>Меня часто спрашивают, как я&nbsp;делаю свои клипы. Ответ — в&nbsp;этом курсе: от&nbsp;основ фотографии до&nbsp;готового AI-клипа на&nbsp;YouTube, на&nbsp;примере «Ырайымың түбөлүк».</p>
+        <ul>
+          <li><span>Два PDF: основы и&nbsp;AI-клип</span><b>99&nbsp;$</b></li>
+          <li><span>PDF + живой урок в&nbsp;Discord, 120&nbsp;минут</span><b>299&nbsp;$</b></li>
+        </ul>
+        <div class="hero-cta">
+          <a class="btn btn--gold" href="kurs/">Подробнее о&nbsp;курсе</a>
+          <a class="btn" href="kurs/#price">Выбрать вариант</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt abschnitt--linie partner" id="partner" aria-labelledby="partner-h">
+  <div class="wrap">
+    <div class="ornament auftauchen" aria-hidden="true" style="margin-bottom:32px"><svg viewBox="0 0 120 60"><use href="#orn"/></svg></div>
+    <p class="eyebrow auftauchen" style="justify-content:center">Өнөктөш бол</p>
+    <h2 class="titel auftauchen" id="partner-h">Стань партнёром — построим вместе</h2>
+    <p class="auftauchen">Каждый клип — это идея, недели работы и&nbsp;свой бюджет. Если мои песни отзываются в&nbsp;тебе, ты можешь стать частью этого и&nbsp;помочь новым песням и&nbsp;клипам на&nbsp;кыргызском выйти в&nbsp;свет.</p>
+    <div class="hero-cta auftauchen">
+      <a class="btn btn--gold" href="support/">Поддержать Aziel</a>
+    </div>
+  </div>
+</section>
+
+<section class="abschnitt abschnitt--linie" id="kontakt" aria-labelledby="kontakt-h">
+  <div class="wrap">
+    <div class="abschnitt-kopf">
+      <div>
+        <p class="eyebrow auftauchen">Связаться</p>
+        <h2 class="titel auftauchen" id="kontakt-h">Давай сделаем что-то новое</h2>
+      </div>
+      <p class="lead auftauchen" data-verzoegerung="1">Коллаборации, клипы, съёмки или просто слово поддержки — пиши.</p>
+    </div>
+    <ul class="kontakt-liste">
+      <li class="auftauchen"><a href="https://www.instagram.com/aziel_timur" rel="noopener"><span>Instagram</span><strong>@aziel_timur</strong></a></li>
+      <li class="auftauchen" data-verzoegerung="1"><a href="https://www.youtube.com/@azielme" rel="noopener"><span>YouTube</span><strong>@azielme</strong></a></li>
+      <li class="auftauchen" data-verzoegerung="2"><a href="mailto:contact@aziel.me"><span>Почта</span><strong>contact@aziel.me</strong></a></li>
+    </ul>
   </div>
 </section>
 
 </main>
 
-<footer class="site">
+<footer class="fuss">
   <div class="wrap">
-    <span>© 2026 Aziel Timur</span>
-    <nav aria-label="Контакты и правовая информация">
-      <a href="https://www.instagram.com/aziel_timur" rel="noopener">Instagram</a>
-      <a href="https://www.youtube.com/watch?v=KwhI8lrwSGo" rel="noopener">YouTube</a>
-      <a href="mailto:contact@aziel.me">contact@aziel.me</a>
-      <a href="support/">Поддержать</a>
-      <a href="agb.html">AGB</a>
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-    </nav>
+    <div class="fuss-oben">
+      <span class="fuss-marke metall-text">Aziel</span>
+      <p class="fuss-ort">Бишкек — Франкфурт</p>
+    </div>
+    <div class="fuss-unten">
+      <span>© 2026 Aziel Timur</span>
+      <nav aria-label="Правовая информация">
+        <a href="kurs/">Курс</a>
+        <a href="support/">Поддержать</a>
+        <a href="agb.html">AGB</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=202610311042" defer></script>
+<dialog class="player" id="player" aria-label="Видео">
+  <button class="player-zu" type="button" data-zu>Закрыть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  <div class="player-buehne"></div>
+  <p class="player-titel"></p>
+</dialog>
+
+<script src="assets/js/main.js?v=202611121" defer></script>
 </body>
 </html>

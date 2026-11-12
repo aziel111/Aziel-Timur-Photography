@@ -1,7 +1,10 @@
 # aziel.me
 
-Website des Kurses «Рисовать светом» von Aziel Timur. Statische Seite auf GitHub Pages.
+Website von Aziel Timur. Statische Seite auf GitHub Pages.
 
-- `index.html` — Startseite (Russisch)
-- `impressum.html`, `datenschutz.html` — Pflichtseiten (Platzhalter ausfüllen)
-- `assets/` — CSS, JS, Schriften (Prata, Golos Text, SIL OFL), Bilder
+- `index.html` — Startseite über Aziel (Russisch): Über mich, Geschichte, Clips, Album «Экклесия», Kurs, Unterstützen, Kontakt
+- `kurs/` — Kursseite «Рисовать светом» mit Stripe-Links
+- `support/` — Weiterleitung zur Stripe-Unterstützungsseite
+- `spasibo.html`, `spasibo-pdf.html` — Danke-Seiten nach dem Kauf (Stripe leitet hierhin weiter, nicht verschieben)
+- `impressum.html`, `datenschutz.html`, `agb.html` — Rechtliches
+- `assets/` — eine gemeinsame CSS-Datei, JS, Schriften (Aziel Serif = Lora, Golos Text; SIL OFL), Bilder
