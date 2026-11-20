@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seite nicht gefunden – Aziel Timur</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#000000">
+<script>
+  // Großgeschriebene Adressen (z. B. aziel.me/Content) auf die richtige Seite umleiten
+  (function () {
+    var p = location.pathname, klein = p.toLowerCase();
+    var seiten = ['/content', '/kurs', '/support'];
+    for (var i = 0; i < seiten.length; i++) {
+      var s = seiten[i];
+      if ((klein === s || klein === s + '/' || klein === s + '/index.html') && p !== s + '/') {
+        location.replace(s + '/' + location.search + location.hash);
+        return;
+      }
+    }
+  })();
+</script>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/style.css?v=202611211">
+</head>
+<body>
+<main class="thanks">
+  <div class="wrap">
+    <h1>Seite nicht gefunden</h1>
+    <p class="lead">Diese Adresse gibt es nicht. Страница не найдена.</p>
+    <div class="actions">
+      <a class="btn btn--gold" href="/content/">Für Unternehmen (DE)</a>
+      <a class="btn" href="/" lang="ru">На главную (RU)</a>
+    </div>
+  </div>
+</main>
+</body>
+</html>
